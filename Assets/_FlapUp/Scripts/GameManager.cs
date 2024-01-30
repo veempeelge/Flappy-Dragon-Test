@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     private bool hasCheckedScore = false;
     private int listIndex = 0;
     private int listDestroyIndex = 0;
-
+    float randomizeX;
     void OnEnable()
     {
         PlayerController.PlayerDied += PlayerController_PlayerDied;
@@ -158,7 +158,7 @@ public class GameManager : MonoBehaviour
         listObstacle.Add(currentObstacle);
 
 
-        addedPosition = new Vector3(0, space, 0);
+        addedPosition = new Vector3(randomizeX, space, 0);
         //Create position for next obstacle 
         obstaclePosition = currentObstacle.transform.position + addedPosition;
 
@@ -169,7 +169,11 @@ public class GameManager : MonoBehaviour
             
         StartCoroutine(GenerateObstacle());
     }
-
+    private void Update()
+    {
+       
+        randomizeX = Random.Range(-3, 3);
+    }
     public void StartGame()
     {
         GameState = GameState.Playing;
@@ -202,6 +206,7 @@ public class GameManager : MonoBehaviour
     void CreateObstacle()
     {
         RandomObstacleType();
+        RandomPosition();
 
         currentObstacle = Instantiate(obstaclePrefab, obstaclePosition, Quaternion.identity) as GameObject;
         currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
@@ -214,6 +219,11 @@ public class GameManager : MonoBehaviour
 
         obstaclePosition = currentObstacle.transform.position + addedPosition;
 
+    }
+
+    private void RandomPosition()
+    {
+       addedPosition.x = Random.Range(-5, 5);
     }
 
     IEnumerator GenerateObstacle()

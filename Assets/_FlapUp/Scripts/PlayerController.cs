@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using SgLib;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
     public static event System.Action PlayerDied;
 
     [Header("Gameplay Config")]
-    public float jumpForce = 13f;
+
+
+    public float jumpForce = 8f;
     //How high player jump
+    public float sideForce = 2f;
+   //side
     public float rotateAngle = 50f;
     //Rotate angle of player
     [HideInInspector]
@@ -116,8 +121,53 @@ public class PlayerController : MonoBehaviour
             Flap();
         }
 
+        if (Input.GetKeyDown(KeyCode.D) && GameManager.Instance.GameState == GameState.Playing)
+        {
+            MoveRight();
+        }
+        if (Input.GetKeyDown(KeyCode.A) && GameManager.Instance.GameState == GameState.Playing)
+        {
+            MoveLeft();
+        }
+
         // Fix position
-        transform.position = new Vector3(0, transform.position.y, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+    }
+
+    private void MoveLeft()
+    {
+        SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
+        StartCoroutine(MoveSideForPlayerLeft()); //add velocity for player
+        if (!isFinishRotate)
+        {
+            isFinishRotate = true;
+            StartCoroutine(RotateParentPlayer()); //rotate player
+        }
+    }
+
+    private void MoveRight()
+    {
+        SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
+        StartCoroutine(MoveSideForPlayerRight()); //add velocity for player
+        if (!isFinishRotate)
+        {
+            isFinishRotate = true;
+            StartCoroutine(RotateParentPlayer()); //rotate player
+        }
+    }
+
+    IEnumerator MoveSideForPlayerRight()
+    {
+        yield return new WaitForFixedUpdate();
+        rigid.velocity = new Vector3(jumpForce, 0, 0);
+        anim.SetTrigger(jump.name);
+    }
+
+    IEnumerator MoveSideForPlayerLeft()
+    {
+        yield return new WaitForFixedUpdate();
+        rigid.velocity = new Vector3(-jumpForce, 0, 0);
+        anim.SetTrigger(jump.name);
     }
 
     void Flap()
