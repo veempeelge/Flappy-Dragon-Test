@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: VerticalGradientSkybox
+  m_Name: Spring
   m_Shader: {fileID: 4800000, guid: cccfc3db116ef42dfbd4983ca2653196, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -78,8 +78,8 @@ Material:
     - _yLocalPosLow: -0.5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorHigh: {r: 1, g: 0.50981236, b: 0, a: 1}
-    - _ColorLow: {r: 1, g: 0.98965514, b: 0.625, a: 1}
+    - _ColorHigh: {r: 0.7019608, g: 1, b: 0.9809752, a: 1}
+    - _ColorLow: {r: 0.62352943, g: 1, b: 0.73318845, a: 1}
     - _ColorUp: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
