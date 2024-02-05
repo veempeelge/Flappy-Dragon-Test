@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
     private int turn = 1;
     private bool isFinishRotate = false;
     private CameraController cameraController;
-    Vector3 position;
 
+    private Vector3 playerPosition;
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
                 hasStarted = true;
             }
 
-            Flap();
+            //Flap();
         }
     }
 
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         anim = player.GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
-       
+        playerPosition = player.transform.position;
     }
 	
     // Update is called once per frame
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
-       if (Input.GetKeyDown(KeyCode.W) && GameManager.Instance.GameState == GameState.Playing)
+       if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && GameManager.Instance.GameState == GameState.Playing)
         {
            Flap();
         }
@@ -130,23 +130,32 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.D) && GameManager.Instance.GameState == GameState.Playing)
+        if (Input.GetKey(KeyCode.D) && GameManager.Instance.GameState == GameState.Playing)
         {  
             MoveRight();
         }
-        if (Input.GetKeyDown(KeyCode.A) && GameManager.Instance.GameState == GameState.Playing)
+        if (Input.GetKey(KeyCode.A) && GameManager.Instance.GameState == GameState.Playing)
         {
             MoveLeft();
         }
 
         // Fix position
-       // transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+    }
+
+    private void HoverRight()
+    {
+        playerPosition.x += 1f;
+    }
+    private void HoverLeft()
+    {
+        playerPosition.x -= 1f;
     }
 
     private void MoveLeft()
     {
  
-        SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
+        //SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerLeft()); //add velocity for player
         if (!isFinishRotate)
         {
@@ -157,7 +166,7 @@ public class PlayerController : MonoBehaviour
 
     private void MoveRight()
     {
-        SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
+        //SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerRight()); //add velocity for player
         if (!isFinishRotate)
         {
@@ -169,14 +178,14 @@ public class PlayerController : MonoBehaviour
     IEnumerator MoveSideForPlayerRight()
     {
         yield return new WaitForFixedUpdate();
-       rigid.velocity = new Vector3(sideForce, jumpForce, 0);
+       rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
         anim.SetTrigger(jump.name);
     }
 
     IEnumerator MoveSideForPlayerLeft()
     {
         yield return new WaitForFixedUpdate();
-        rigid.velocity = new Vector3(-sideForce, jumpForce, 0);
+        rigid.velocity = new Vector3(-sideForce, rigid.velocity.y, 0);
         anim.SetTrigger(jump.name);
     }
     IEnumerator AddVelocityForPlayer()
@@ -184,7 +193,7 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForFixedUpdate();
         Debug.Log("Flap function called");
-        rigid.velocity = new Vector3(0, jumpForce, 0);
+        rigid.velocity = new Vector3(rigid.velocity.x, jumpForce, 0);
         anim.SetTrigger(jump.name);
     }
 
