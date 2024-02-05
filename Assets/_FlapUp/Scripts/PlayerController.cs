@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce = 8f;
     //How high player jump
-    public float sideForce = 2f;
+    public float sideForce = .8f;
    //side
     public float rotateAngle = 50f;
     //Rotate angle of player
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
-       if (Input.GetMouseButtonDown(0) && GameManager.Instance.GameState == GameState.Playing)
+       if (Input.GetKeyDown(KeyCode.W) && GameManager.Instance.GameState == GameState.Playing)
         {
            Flap();
         }
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Fix position
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+       // transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     private void MoveLeft()
@@ -148,25 +148,36 @@ public class PlayerController : MonoBehaviour
  
         SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerLeft()); //add velocity for player
-        
+        if (!isFinishRotate)
+        {
+            isFinishRotate = true;
+            StartCoroutine(RotateParentPlayer()); //rotate player
+        }
     }
 
     private void MoveRight()
     {
         SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerRight()); //add velocity for player
+        if (!isFinishRotate)
+        {
+            isFinishRotate = true;
+            StartCoroutine(RotateParentPlayer()); //rotate player
+        }
     }
 
     IEnumerator MoveSideForPlayerRight()
     {
         yield return new WaitForFixedUpdate();
        rigid.velocity = new Vector3(sideForce, jumpForce, 0);
+        anim.SetTrigger(jump.name);
     }
 
     IEnumerator MoveSideForPlayerLeft()
     {
         yield return new WaitForFixedUpdate();
         rigid.velocity = new Vector3(-sideForce, jumpForce, 0);
+        anim.SetTrigger(jump.name);
     }
     IEnumerator AddVelocityForPlayer()
     {
