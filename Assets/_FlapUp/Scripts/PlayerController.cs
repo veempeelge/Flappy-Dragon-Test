@@ -143,15 +143,6 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
-    private void HoverRight()
-    {
-        playerPosition.x += 1f;
-    }
-    private void HoverLeft()
-    {
-        playerPosition.x -= 1f;
-    }
-
     private void MoveLeft()
     {
  
