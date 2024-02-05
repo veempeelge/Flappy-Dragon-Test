@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private int turn = 1;
     private bool isFinishRotate = false;
     private CameraController cameraController;
+    Vector3 position;
 
     void OnEnable()
     {
@@ -103,6 +104,7 @@ public class PlayerController : MonoBehaviour
 
         anim = player.GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
+       
     }
 	
     // Update is called once per frame
@@ -116,13 +118,20 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
-        if (Input.GetMouseButtonDown(0) && GameManager.Instance.GameState == GameState.Playing)
+       if (Input.GetMouseButtonDown(0) && GameManager.Instance.GameState == GameState.Playing)
         {
-            Flap();
+           Flap();
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && GameManager.Instance.GameState == GameState.Playing)
+       // if ((Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && GameManager.Instance.GameState == GameState.Playing)
         {
+           // Flap();
+          //  Debug.Log("Should be flapping");
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.D) && GameManager.Instance.GameState == GameState.Playing)
+        {  
             MoveRight();
         }
         if (Input.GetKeyDown(KeyCode.A) && GameManager.Instance.GameState == GameState.Playing)
@@ -136,42 +145,41 @@ public class PlayerController : MonoBehaviour
 
     private void MoveLeft()
     {
+ 
         SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerLeft()); //add velocity for player
-        if (!isFinishRotate)
-        {
-            isFinishRotate = true;
-            StartCoroutine(RotateParentPlayer()); //rotate player
-        }
+        
     }
 
     private void MoveRight()
     {
         SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerRight()); //add velocity for player
-        if (!isFinishRotate)
-        {
-            isFinishRotate = true;
-            StartCoroutine(RotateParentPlayer()); //rotate player
-        }
     }
 
     IEnumerator MoveSideForPlayerRight()
     {
         yield return new WaitForFixedUpdate();
-        rigid.velocity = new Vector3(jumpForce, 0, 0);
-        anim.SetTrigger(jump.name);
+       rigid.velocity = new Vector3(sideForce, jumpForce, 0);
     }
 
     IEnumerator MoveSideForPlayerLeft()
     {
         yield return new WaitForFixedUpdate();
-        rigid.velocity = new Vector3(-jumpForce, 0, 0);
+        rigid.velocity = new Vector3(-sideForce, jumpForce, 0);
+    }
+    IEnumerator AddVelocityForPlayer()
+    {
+
+        yield return new WaitForFixedUpdate();
+        Debug.Log("Flap function called");
+        rigid.velocity = new Vector3(0, jumpForce, 0);
         anim.SetTrigger(jump.name);
     }
 
     void Flap()
     {
+        
         SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(AddVelocityForPlayer()); //add velocity for player
         if (!isFinishRotate)
@@ -190,12 +198,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator AddVelocityForPlayer()
-    {
-        yield return new WaitForFixedUpdate();
-        rigid.velocity = new Vector3(0, jumpForce, 0);
-        anim.SetTrigger(jump.name);
-    }
+   
 
     void OnTriggerEnter(Collider other)
     {

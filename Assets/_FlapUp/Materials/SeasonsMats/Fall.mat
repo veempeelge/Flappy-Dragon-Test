@@ -78,8 +78,8 @@ Material:
     - _yLocalPosLow: -0.5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorHigh: {r: 1, g: 0.83413935, b: 0, a: 1}
-    - _ColorLow: {r: 1, g: 0.54949003, b: 0, a: 1}
+    - _ColorHigh: {r: 0.61960787, g: 0.60784316, b: 0.4392157, a: 1}
+    - _ColorLow: {r: 0.8980392, g: 0.74509805, b: 0.37254903, a: 1}
     - _ColorUp: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

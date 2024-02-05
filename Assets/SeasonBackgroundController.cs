@@ -31,7 +31,7 @@ public class SeasonBackgroundController : MonoBehaviour
         currentGroundMaterial = ground.GetComponent<Material>();
         whatGroundMaterial = groundMaterial[index];
 
-        season.SetText(seasonText[index]);
+        season.SetText("Its " + seasonText[index] + "!");
     }
 
     // Update is called once per frame

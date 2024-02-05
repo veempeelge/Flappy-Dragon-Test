@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
        
-        randomizeX = Random.Range(-3, 3);
+        randomizeX = Random.Range(-2, 2);
     }
     public void StartGame()
     {
