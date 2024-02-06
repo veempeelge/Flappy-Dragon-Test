@@ -64,8 +64,8 @@ public class GameManager : MonoBehaviour
     public GameObject electricObstacle;
     public ParticleSystem electricParticle;
 
-    [Header("Gameplay Config")]   
-    public int initialObstcacle = 3;
+    [Header("Gameplay Config")]
+    public int initialObstacle = 3;
     //How many obstacle you create when the game start
     public int space = 7;
     //Space between 2 obstacle
@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
        
-        randomizeX = Random.Range(-2, 2);
+        randomizeX = Random.Range(-1, 1);
     }
     public void StartGame()
     {
