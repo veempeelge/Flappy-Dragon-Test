@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Gameplay Config")]
 
-
+    public float maxVelocity;
     public float jumpForce = 8f;
     //How high player jump
     public float sideForce = .8f;
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     float clickCount;
     bool flip;
+    
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -121,13 +122,14 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
-       if ((Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && GameManager.Instance.GameState == GameState.Playing)
+       if ((Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0)) && GameManager.Instance.GameState == GameState.Playing)
         {
 
            // Flap();
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetMouseButtonDown(0))
             {
                 Flap();
+                rigid.useGravity = false;
                 if (clickCount == 0)
                 {
                     flip = true;
@@ -140,7 +142,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if(Input.GetKey(KeyCode.W))
+            if(Input.GetKey(KeyCode.W) || Input.GetMouseButton(0))
             {
                     if (flip)
                     {
@@ -152,13 +154,14 @@ public class PlayerController : MonoBehaviour
                     }
             }
           
+            rigid.useGravity = true;
 
 
         }
 
         if (Input.GetKeyUp(KeyCode.W))
         {
-           // StopMove();
+            //StopMove();
         }
 
        // if ((Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && GameManager.Instance.GameState == GameState.Playing)
@@ -226,8 +229,14 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForFixedUpdate();
         Debug.Log("Flap function called");
-        rigid.velocity = new Vector3(rigid.velocity.x, jumpForce, 0);
+        rigid.AddForce(0, jumpForce, 0);
         anim.SetTrigger(jump.name);
+
+        Debug.Log(rigid.velocity.x);
+        if (rigid.velocity.y > maxVelocity)
+        {
+            rigid.velocity = new Vector3(rigid.velocity.x, maxVelocity - 1, 0);
+        }
     }
 
     void Flap()

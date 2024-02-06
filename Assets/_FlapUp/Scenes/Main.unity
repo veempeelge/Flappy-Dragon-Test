@@ -444,7 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e12a40b36a02e4eaf6400481ae2e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 8
+  maxVelocity: 7
+  jumpForce: 200
   sideForce: 3
   rotateAngle: 70
   hasStarted: 0
@@ -2624,8 +2625,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: -0.2}
+  m_Size: {x: 0.50102323, y: 1, z: 1}
+  m_Center: {x: -0.0073378384, y: 0.5, z: -0.19999999}
 --- !u!4 &502034568
 Transform:
   m_ObjectHideFlags: 0
@@ -4374,16 +4375,16 @@ MonoBehaviour:
   electricObstacle: {fileID: 155590, guid: c1f824e0bfad84544b4aae3091c87689, type: 3}
   electricParticle: {fileID: 19826806, guid: c5ab68b1aee544f468171be6bc375b3e, type: 3}
   initialObstacle: 3
-  space: 7
+  space: 10
   obstacleCounter: 4
   maxObstacleFluctuationRange: 4
   minObstacleFluctuationRange: 3
   scoreToUpdateValue: 10
   decreaseObstacleSpeedValue: 0.05
-  minObstacleSpeedFactor: 0.7
+  minObstacleSpeedFactor: 1.5
   maxObstacleSpeedFactor: 1.5
   minimumMinObstacleSpeedFactor: 0.4
-  minimumMaxObstacleSpeedFactor: 0.7
+  minimumMaxObstacleSpeedFactor: 1
   goldFrequecy: 0.5
 --- !u!1 &843388496
 GameObject:
@@ -8422,7 +8423,7 @@ Transform:
   m_GameObject: {fileID: 1637645247}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9862, y: 14.7142, z: 0}
+  m_LocalPosition: {x: -6, y: 14.7142, z: 0}
   m_LocalScale: {x: 2.027046, y: 40.42924, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8716,7 +8717,7 @@ Transform:
   m_GameObject: {fileID: 1745959456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.7, y: 14.7142, z: 0}
+  m_LocalPosition: {x: 6.2, y: 14.7142, z: 0}
   m_LocalScale: {x: 2.027046, y: 40.42924, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
