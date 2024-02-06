@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
     private CameraController cameraController;
 
     private Vector3 playerPosition;
+
+    float clickCount;
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -120,7 +122,35 @@ public class PlayerController : MonoBehaviour
 
        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && GameManager.Instance.GameState == GameState.Playing)
         {
-           Flap();
+
+           // Flap();
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                Flap();
+               
+            }
+
+            if(Input.GetKey(KeyCode.W))
+            {
+                    if (clickCount == 0)
+                    {
+                        MoveLeft();
+                        clickCount++;
+                    }
+                    else if (clickCount > 0)
+                    {
+                        MoveRight();
+                        clickCount = 0;
+                    }
+            }
+          
+
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            StopMove();
         }
 
        // if ((Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && GameManager.Instance.GameState == GameState.Playing)
@@ -143,6 +173,10 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
+    void StopMove()
+    {
+        rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
+    }
     private void MoveLeft()
     {
  
@@ -169,7 +203,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator MoveSideForPlayerRight()
     {
         yield return new WaitForFixedUpdate();
-       rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
+        rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
         anim.SetTrigger(jump.name);
     }
 
