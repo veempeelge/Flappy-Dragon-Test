@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerPosition;
 
     float clickCount;
+    bool flip;
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -120,27 +121,34 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
-       if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && GameManager.Instance.GameState == GameState.Playing)
+       if ((Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && GameManager.Instance.GameState == GameState.Playing)
         {
 
            // Flap();
             if (Input.GetKeyDown(KeyCode.W))
             {
                 Flap();
-               
+                if (clickCount == 0)
+                {
+                    flip = true;
+                    clickCount++;
+                }
+                else
+                {
+                    flip = false;
+                    clickCount--;
+                }
             }
 
             if(Input.GetKey(KeyCode.W))
             {
-                    if (clickCount == 0)
+                    if (flip)
                     {
                         MoveLeft();
-                        clickCount++;
                     }
-                    else if (clickCount > 0)
+                    else if (!flip)
                     {
                         MoveRight();
-                        clickCount = 0;
                     }
             }
           
@@ -150,7 +158,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.W))
         {
-            StopMove();
+           // StopMove();
         }
 
        // if ((Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && GameManager.Instance.GameState == GameState.Playing)
