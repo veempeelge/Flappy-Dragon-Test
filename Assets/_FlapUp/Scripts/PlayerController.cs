@@ -125,36 +125,41 @@ public class PlayerController : MonoBehaviour
        if ((Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0)) && GameManager.Instance.GameState == GameState.Playing)
         {
 
-           // Flap();
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetMouseButtonDown(0))
+            //Flap();
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0))
             {
                 Flap();
                 rigid.useGravity = false;
-                if (clickCount == 0)
-                {
-                    flip = true;
-                    clickCount++;
-                }
-                else
-                {
-                    flip = false;
-                    clickCount--;
-                }
+                //if (clickCount == 0)
+                //{
+                //    flip = true;
+                //    clickCount++;
+                //}
+                //else
+                //{
+                //    flip = false;
+                //    clickCount--;
+                //}
             }
 
-            if(Input.GetKey(KeyCode.W) || Input.GetMouseButton(0))
-            {
-                    if (flip)
-                    {
-                        MoveLeft();
-                    }
-                    else if (!flip)
-                    {
-                        MoveRight();
-                    }
-            }
-          
-            rigid.useGravity = true;
+            //if (Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2)
+            //{
+            //    MoveLeft();
+            //    //        if (flip)
+            //    //        {
+            //    //            MoveLeft();
+            //    //        }
+            //    //        else if (!flip)
+            //    //        {
+            //    //            MoveRight();
+            //    //        }
+            //}
+
+            //if (Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2)
+            //{
+            //    MoveRight();
+            //}
+                rigid.useGravity = true;
 
 
         }
@@ -171,11 +176,11 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.D) && GameManager.Instance.GameState == GameState.Playing)
-        {  
+        if ((Input.GetKey(KeyCode.D) || Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2) && GameManager.Instance.GameState == GameState.Playing)
+        {
             MoveRight();
         }
-        if (Input.GetKey(KeyCode.A) && GameManager.Instance.GameState == GameState.Playing)
+        if ((Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2 ) && GameManager.Instance.GameState == GameState.Playing)
         {
             MoveLeft();
         }
@@ -229,7 +234,7 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForFixedUpdate();
         Debug.Log("Flap function called");
-        rigid.AddForce(0, jumpForce, 0);
+        rigid.AddForce(rigid.velocity.x, jumpForce, 0);
         anim.SetTrigger(jump.name);
 
         Debug.Log(rigid.velocity.x);
