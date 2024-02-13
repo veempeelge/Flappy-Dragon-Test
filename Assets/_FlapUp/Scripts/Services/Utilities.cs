@@ -78,7 +78,7 @@ namespace SgLib
 
         public static string EscapeURL(string url)
         {
-            return WWW.EscapeURL(url).Replace("+", "%20");
+             return WWW.EscapeURL(url).Replace("+", "%20");
         }
 
         public static int[] GenerateShuffleIndices(int length)

@@ -290,8 +290,8 @@ public class PlayerController : MonoBehaviour
                 hitObstacle = true;
 
                 Die();
-                rigid.velocity = new Vector3(0, 0, 0);
-                transform.position = new Vector3(0, transform.position.y, 0);
+                //rigid.velocity = new Vector3(0, 0, 0);
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
                 //Create particle base on obstacle
                 rigid.isKinematic = true;
@@ -308,8 +308,8 @@ public class PlayerController : MonoBehaviour
                 hitObstacle = true;
 
                 Die();
-                rigid.velocity = new Vector3(0, 0, 0);
-                transform.position = new Vector3(0, transform.position.y, 0);
+                //rigid.velocity = new Vector3(0, 0, 0);
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
                 //Create particle base on obstacle
                 rigid.isKinematic = true;
@@ -329,8 +329,8 @@ public class PlayerController : MonoBehaviour
                 hitObstacle = true;
 
                 Die();
-                rigid.velocity = new Vector3(0, 0, 0);
-                transform.position = new Vector3(0, transform.position.y, 0);
+                //rigid.velocity = new Vector3(0, 0, 0);
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
                 //Create particle base on obstacle
                 rigid.isKinematic = true;
@@ -350,8 +350,8 @@ public class PlayerController : MonoBehaviour
                 hitObstacle = true;
 
                 Die();
-                rigid.velocity = new Vector3(0, 0, 0);  //stop player
-                transform.position = new Vector3(0, transform.position.y, 0);
+               // rigid.velocity = new Vector3(0, 0, 0);  //stop player
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
                 //Create particle base on obstacle
                 rigid.isKinematic = true;
