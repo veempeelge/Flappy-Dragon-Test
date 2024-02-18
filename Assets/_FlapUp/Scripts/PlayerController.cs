@@ -2,6 +2,7 @@
 using System.Collections;
 using SgLib;
 using System;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -44,6 +45,13 @@ public class PlayerController : MonoBehaviour
 
     float clickCount;
     bool flip;
+
+    public float stamina;
+    float maxStamina;
+    float cooldown;
+    float regenCooldown = .5f;
+
+    [SerializeField] TMP_Text staminaText;
     
     void OnEnable()
     {
@@ -71,6 +79,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        maxStamina = stamina;
         cameraController = Camera.main.GetComponent<CameraController>();
 
         // Change the character to the selected one
@@ -109,6 +118,7 @@ public class PlayerController : MonoBehaviour
         anim = player.GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         playerPosition = player.transform.position;
+        
     }
 	
     // Update is called once per frame
@@ -126,10 +136,12 @@ public class PlayerController : MonoBehaviour
         {
 
             //Flap();
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0))
+            if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0)) && stamina > 0f)
             {
                 Flap();
                 rigid.useGravity = false;
+                stamina -= .2f;
+                cooldown = 0f;
                 //if (clickCount == 0)
                 //{
                 //    flip = true;
@@ -141,6 +153,14 @@ public class PlayerController : MonoBehaviour
                 //    clickCount--;
                 //}
             }
+
+            if (stamina <= 0)
+            {
+                Debug.Log("No Stamina");
+            }
+
+
+            
 
             //if (Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2)
             //{
@@ -159,15 +179,12 @@ public class PlayerController : MonoBehaviour
             //{
             //    MoveRight();
             //}
-                rigid.useGravity = true;
+            rigid.useGravity = true;
 
 
         }
 
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            //StopMove();
-        }
+      
 
        // if ((Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && GameManager.Instance.GameState == GameState.Playing)
         {
@@ -189,6 +206,18 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
+    private void FixedUpdate()
+    {
+        string staminaTxt = stamina.ToString();
+        cooldown += 1f * Time.deltaTime;
+        
+        staminaText.SetText(staminaTxt);
+
+        if (cooldown > regenCooldown && stamina < maxStamina)
+        {
+            stamina += .6f;
+        }
+    }
     void StopMove()
     {
         rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
@@ -233,11 +262,8 @@ public class PlayerController : MonoBehaviour
     {
 
         yield return new WaitForFixedUpdate();
-        Debug.Log("Flap function called");
         rigid.AddForce(rigid.velocity.x, jumpForce, 0);
         anim.SetTrigger(jump.name);
-
-        Debug.Log(rigid.velocity.x);
         if (rigid.velocity.y > maxVelocity)
         {
             rigid.velocity = new Vector3(rigid.velocity.x, maxVelocity - 1, 0);
@@ -275,6 +301,7 @@ public class PlayerController : MonoBehaviour
             CoinManager.Instance.AddCoins(1);
             CreateParticle(goldParticlePrefab, other.transform.position);
             Destroy(other.gameObject);
+            stamina = maxStamina;
         }
         else
         {
