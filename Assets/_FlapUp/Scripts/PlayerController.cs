@@ -215,7 +215,7 @@ public class PlayerController : MonoBehaviour
 
         if (cooldown > regenCooldown && stamina < maxStamina)
         {
-            stamina += .6f;
+            stamina += .1f;
         }
     }
     void StopMove()

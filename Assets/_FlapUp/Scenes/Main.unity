@@ -460,7 +460,7 @@ MonoBehaviour:
   jump: {fileID: 7400000, guid: 2186ada5917f5504c92217b03c15089b, type: 2}
   rotate: {fileID: 7400000, guid: 6c5d70fd7116cf74e891df8b25884c50, type: 2}
   gray: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
-  stamina: 20
+  stamina: 5
   staminaText: {fileID: 1246053038}
 --- !u!54 &145060897
 Rigidbody:
