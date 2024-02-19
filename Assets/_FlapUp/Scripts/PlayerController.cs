@@ -2,6 +2,7 @@
 using System.Collections;
 using SgLib;
 using System;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
@@ -51,7 +52,8 @@ public class PlayerController : MonoBehaviour
     float cooldown;
     float regenCooldown = .5f;
 
-    [SerializeField] TMP_Text staminaText;
+    [SerializeField] Image staminaBar;
+
     
     void OnEnable()
     {
@@ -124,6 +126,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        staminaBar.fillAmount = stamina / maxStamina;
         //Check player fall out of camera
         if (Camera.main.WorldToScreenPoint(transform.position).y < -30 && GameManager.Instance.GameState != GameState.GameOver)
         {
@@ -211,7 +215,7 @@ public class PlayerController : MonoBehaviour
         string staminaTxt = stamina.ToString();
         cooldown += 1f * Time.deltaTime;
         
-        staminaText.SetText(staminaTxt);
+  
 
         if (cooldown > regenCooldown && stamina < maxStamina)
         {
