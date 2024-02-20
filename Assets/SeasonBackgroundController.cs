@@ -9,6 +9,7 @@ public class SeasonBackgroundController : MonoBehaviour
     [SerializeField] GameObject backgroundColor;
     [SerializeField] Material[] bgColor;
     [SerializeField] Material[] groundMaterial;
+    [SerializeField] ParticleSystem[] particleSystems;
     [SerializeField] string[] seasonText;
     [SerializeField] TMP_Text season;
 
@@ -32,18 +33,20 @@ public class SeasonBackgroundController : MonoBehaviour
         whatGroundMaterial = groundMaterial[index];
 
         season.SetText("Its " + seasonText[index] + "!");
+
+        particleSystems[index].Play();
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         ChangeObjectMaterial(whatMaterial);
         ChangeGroundMaterial(whatGroundMaterial);
     }
 
 
 
-    // Function to change the material
     public void ChangeObjectMaterial(Material material)
     {
         Renderer renderer = GetComponent<Renderer>();

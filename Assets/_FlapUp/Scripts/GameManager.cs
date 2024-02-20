@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
     public GameObject iceParticle;
     public GameObject electricObstacle;
     public ParticleSystem electricParticle;
+    public GameObject saw;
 
     [Header("Gameplay Config")]
     public int initialObstacle = 3;
@@ -301,7 +302,7 @@ public class GameManager : MonoBehaviour
 
     void RandomObstacleType()
     {
-        int index = Random.Range(0, 4);
+        int index = Random.Range(5, 5);
         if (index == 0) //Normal obstacle
         {
             obstaclePrefab = normalObstacle;
@@ -314,9 +315,13 @@ public class GameManager : MonoBehaviour
         {
             obstaclePrefab = iceObstacle;
         }
-        else //Electric obstacle
+        else if (index == 3)//Electric obstacle
         {
             obstaclePrefab = electricObstacle;
+        }
+        else
+        {
+            obstaclePrefab = saw;
         }
     }
 }

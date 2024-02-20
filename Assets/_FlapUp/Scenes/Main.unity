@@ -8719,7 +8719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 145060896}
   theGround: {fileID: 417298828}
-  followUpSpeedFactor: 1.5
+  followUpSpeedFactor: 5
   isStopMoving: 0
   shakeDuration: 0.1
   shakeAmount: 0.3
@@ -9224,7 +9224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -174}
+  m_AnchoredPosition: {x: 6, y: -439}
   m_SizeDelta: {x: 175.38, y: 46.3583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818107148
@@ -10127,7 +10127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -174}
+  m_AnchoredPosition: {x: 6, y: -439}
   m_SizeDelta: {x: 175.38, y: 46.3583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1967717978
