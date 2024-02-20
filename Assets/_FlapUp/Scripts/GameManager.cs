@@ -153,8 +153,18 @@ public class GameManager : MonoBehaviour
         //Create the first obstacle and add to list
         Vector3 firstObstaclePos = theGround.transform.position + new Vector3(0, 13f, 0);
         currentObstacle = Instantiate(obstaclePrefab, firstObstaclePos, Quaternion.identity) as GameObject;
-        currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
-        currentObstacle.GetComponent<ObstacleController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+        if (currentObstacle.GetComponent<ObstacleController>() != null)
+        {
+            currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+            currentObstacle.GetComponent<ObstacleController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+        }
+        else
+        {
+            currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+            currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+        }
+       
+
         currentObstacle.transform.parent = transform;
         listObstacle.Add(currentObstacle);
 
@@ -172,7 +182,6 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-       
         randomizeX = Random.Range(-1, 1);
     }
     public void StartGame()
@@ -210,8 +219,18 @@ public class GameManager : MonoBehaviour
         RandomPosition();
 
         currentObstacle = Instantiate(obstaclePrefab, obstaclePosition, Quaternion.identity) as GameObject;
-        currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
-        currentObstacle.GetComponent<ObstacleController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+        if (currentObstacle.GetComponent<ObstacleController>() != null)
+        {
+            currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+            currentObstacle.GetComponent<ObstacleController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+        }
+        else
+        {
+            currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+            currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+
+        }
+       
         currentObstacle.transform.parent = transform;
 
         CreateGold();
@@ -302,7 +321,7 @@ public class GameManager : MonoBehaviour
 
     void RandomObstacleType()
     {
-        int index = Random.Range(5, 5);
+        int index = Random.Range(0, 5);
         if (index == 0) //Normal obstacle
         {
             obstaclePrefab = normalObstacle;

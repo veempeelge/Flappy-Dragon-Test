@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3802617220966037621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.28}
-  m_LocalScale: {x: 11.27, y: -0.2, z: 0.18}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01}
+  m_LocalScale: {x: 5.49, y: -0.2, z: 0.18}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1938137108515245384}
@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 1493952281972817370}
   - component: {fileID: 5937126520007673498}
   - component: {fileID: 6036299783091513444}
-  - component: {fileID: 4410955215572591183}
   - component: {fileID: 150355505864073063}
   m_Layer: 0
   m_Name: Saw
@@ -112,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 4391308547269870536}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.67, y: 0, z: 0}
   m_LocalScale: {x: 2.2, y: 0.11000001, z: 2.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -168,22 +167,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4410955215572591183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4391308547269870536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a78c9b095a43e44aae07c70df325140, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftOb: {fileID: 4391308547269870536}
-  rightOb: {fileID: 4391308547269870536}
-  movingSpeed: 1
-  fluctuationRange: 1
 --- !u!65 &150355505864073063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -215,9 +198,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1938137108515245384}
   - component: {fileID: 8693304646402999948}
-  - component: {fileID: 8346916725451811608}
+  - component: {fileID: 979750264384944994}
   m_Layer: 0
-  m_Name: Saw
+  m_Name: SawController
   m_TagString: NormalObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +231,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6672759710502727884}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8346916725451811608
+--- !u!114 &979750264384944994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,5 +244,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saw: {fileID: 4391308547269870536}
-  movingSpeed: 0
-  fluctuationRange: 0
+  movingSpeed: 1
+  fluctuationRange: 1

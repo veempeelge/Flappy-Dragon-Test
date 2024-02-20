@@ -16,7 +16,7 @@ public class SawController : MonoBehaviour
     void Start()
     {
         firstRightObPosition = Mathf.Abs(saw.transform.position.x);
-        maxLengthMove = GameManager.Instance.maxObstacleFluctuationRange - 0.5f;
+        maxLengthMove = GameManager.Instance.maxObstacleFluctuationRange - .5f;
 
 
         StartCoroutine(MovingSaw());
@@ -72,18 +72,20 @@ public class SawController : MonoBehaviour
 
                 if (currentRightObXPosition < firstRightObPosition + maxLengthMove)
                 {
-                    float addedDistance = (firstRightObPosition + maxLengthMove) - currentRightObXPosition;
+                    //float addedDistance = (firstRightObPosition + maxLengthMove) - currentRightObXPosition;
 
-                    Vector3 startPosLeftOb = saw.transform.position;
-                    Vector3 endPosLeftOb = saw.transform.position + new Vector3(-addedDistance, 0, 0);
+                   // Vector3 startPosLeftOb = saw.transform.position;
+                   // Vector3 endPosLeftOb = saw.transform.position + new Vector3(-addedDistance, 0, 0);
 
+
+          
 
                     float t = 0;
                     while (t < GameManager.Instance.minObstacleSpeedFactor / 2)
                     {
                         t += Time.deltaTime;
                         float fraction = t / (GameManager.Instance.minObstacleSpeedFactor / 2);
-                        saw.transform.position = Vector3.Lerp(startPosLeftOb, endPosLeftOb, fraction);
+                     //   saw.transform.position = Vector3.Lerp(startPosLeftOb, endPosLeftOb, fraction);
                  
                         yield return null;
                     }
