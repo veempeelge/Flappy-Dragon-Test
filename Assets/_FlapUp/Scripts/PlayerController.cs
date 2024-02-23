@@ -299,6 +299,14 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if(other.tag == "Finish")
+        {
+            //finish
+            //go next level (scene)
+            // end screen
+
+            Debug.Log("Lvl finished");
+        }
         if (other.tag == "Gold") //Hit gold
         {
             SoundManager.Instance.PlaySound(SoundManager.Instance.item);

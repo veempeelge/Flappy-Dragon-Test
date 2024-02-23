@@ -66,9 +66,9 @@ public class GameManager : MonoBehaviour
     public GameObject saw;
 
     [Header("Gameplay Config")]
-    public int initialObstacle = 3;
+    public int initialObstacle;
     //How many obstacle you create when the game start
-    public int space = 7;
+    public int space;
     //Space between 2 obstacle
 
     /*when the score higher than this value, 
@@ -106,6 +106,8 @@ public class GameManager : MonoBehaviour
     private int listIndex = 0;
     private int listDestroyIndex = 0;
     float randomizeX;
+
+    public bool endless;
     void OnEnable()
     {
         PlayerController.PlayerDied += PlayerController_PlayerDied;
@@ -148,37 +150,46 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = targetFrameRate;
         ScoreManager.Instance.Reset();
 
-        RandomObstacleType();//Random obstacle's type
 
-        //Create the first obstacle and add to list
-        Vector3 firstObstaclePos = theGround.transform.position + new Vector3(0, 13f, 0);
-        currentObstacle = Instantiate(obstaclePrefab, firstObstaclePos, Quaternion.identity) as GameObject;
-        if (currentObstacle.GetComponent<ObstacleController>() != null)
+        if(endless == true)
         {
-            currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
-            currentObstacle.GetComponent<ObstacleController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+            RandomObstacleType();//Random obstacle's type
+
+            //Create the first obstacle and add to list
+            Vector3 firstObstaclePos = theGround.transform.position + new Vector3(0, 13f, 0);
+            currentObstacle = Instantiate(obstaclePrefab, firstObstaclePos, Quaternion.identity) as GameObject;
+            if (currentObstacle.GetComponent<ObstacleController>() != null)
+            {
+                currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+                currentObstacle.GetComponent<ObstacleController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+            }
+            else
+            {
+                currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+                currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+            }
+
+
+            currentObstacle.transform.parent = transform;
+            listObstacle.Add(currentObstacle);
+
+
+            addedPosition = new Vector3(randomizeX, space, 0);
+            //Create position for next obstacle 
+            obstaclePosition = currentObstacle.transform.position + addedPosition;
+
+            for (int i = 0; i <= initialObstacle; i++)
+            {
+                CreateObstacle();
+            }
+
+            StartCoroutine(GenerateObstacle());
         }
         else
         {
-            currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
-            currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+            return;
         }
        
-
-        currentObstacle.transform.parent = transform;
-        listObstacle.Add(currentObstacle);
-
-
-        addedPosition = new Vector3(randomizeX, space, 0);
-        //Create position for next obstacle 
-        obstaclePosition = currentObstacle.transform.position + addedPosition;
-
-        for (int i = 0; i < initialObstacle; i++)
-        {
-            CreateObstacle();
-        }
-            
-        StartCoroutine(GenerateObstacle());
     }
     private void Update()
     {
