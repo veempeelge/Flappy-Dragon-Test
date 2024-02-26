@@ -350,6 +350,6 @@ public class CharacterScroller : MonoBehaviour
 
     public void BackToMain()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main Menu");
     }
 }

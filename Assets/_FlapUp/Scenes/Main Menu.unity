@@ -457,6 +457,8 @@ MonoBehaviour:
   goldParticlePrefab: {fileID: 19862024, guid: a313b11c12cdb944289aa8f6a52726c5, type: 3}
   hitGroundParticlePrefab: {fileID: 19881106, guid: 973ca0c97462c75429023027dcc7eaf3,
     type: 3}
+  boostParticlePrefab: {fileID: 0}
+  boostingParticle: {fileID: 0}
   jump: {fileID: 7400000, guid: 2186ada5917f5504c92217b03c15089b, type: 2}
   rotate: {fileID: 7400000, guid: 6c5d70fd7116cf74e891df8b25884c50, type: 2}
   gray: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
@@ -29449,6 +29451,7 @@ MonoBehaviour:
   soundOffBtn: {fileID: 1525595866}
   musicOnBtn: {fileID: 843388496}
   musicOffBtn: {fileID: 567793648}
+  backToMainMenu: {fileID: 0}
   watchRewardedAdBtn: {fileID: 896615714}
   leaderboardBtn: {fileID: 2100635586}
   achievementBtn: {fileID: 865626197}
