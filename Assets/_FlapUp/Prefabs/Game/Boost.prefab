@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 5462238}
   - component: {fileID: 11403384}
   m_Layer: 0
-  m_Name: Gold
-  m_TagString: Gold
+  m_Name: Boost
+  m_TagString: Boost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a094cdd5df64e94b82f3a11d41dda85, type: 2}
+  - {fileID: 2100000, guid: 4ec2dafafec023242aa230df7db4d6ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -12,6 +12,8 @@ TagManager:
   - IceObstacle
   - NormalObstacle
   - TheGround
+  - Boost
+  - Stamina
   layers:
   - Default
   - TransparentFX

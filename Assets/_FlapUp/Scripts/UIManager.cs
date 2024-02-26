@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     public GameObject soundOffBtn;
     public GameObject musicOnBtn;
     public GameObject musicOffBtn;
+    public GameObject backToMainMenu;
 
     [Header("Premium Features Buttons")]
     public GameObject watchRewardedAdBtn;
@@ -131,6 +132,7 @@ public class UIManager : MonoBehaviour
         characterSelectBtn.SetActive(false);
         menuButtons.SetActive(false);
         dailyRewardBtn.SetActive(false);
+        backToMainMenu.SetActive(false);
 
         // Enable or disable premium stuff
         bool enablePremium = IsPremiumFeaturesEnabled();
@@ -191,6 +193,7 @@ public class UIManager : MonoBehaviour
         characterSelectBtn.SetActive(false);
         dailyRewardBtn.SetActive(false);
         watchRewardedAdBtn.SetActive(false);
+        backToMainMenu.SetActive(false);
     }
 
     public void ShowGameOverUI()
@@ -203,6 +206,7 @@ public class UIManager : MonoBehaviour
         newBestScore.SetActive(ScoreManager.Instance.HasNewHighScore);
         watchRewardedAdBtn.gameObject.SetActive(false);
         settingsUI.SetActive(false);
+        backToMainMenu.SetActive(true);
 
         ShowDailyRewardBtn();
 

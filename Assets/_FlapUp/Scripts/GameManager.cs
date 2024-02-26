@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using SgLib;
+using UnityEngine.UIElements;
 
 public enum GameState
 {
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
     public GameObject goldPrefab;
     public GameObject parentPlayer;
     public GameObject theGround;
+    public GameObject[] powerUpPrefabs;
     [Header("Obstacles")]
     public GameObject normalObstacle;
     public GameObject fireObstacle;
@@ -64,6 +66,8 @@ public class GameManager : MonoBehaviour
     public GameObject electricObstacle;
     public ParticleSystem electricParticle;
     public GameObject saw;
+    public GameObject sawRight;
+    
 
     [Header("Gameplay Config")]
     public int initialObstacle;
@@ -244,7 +248,8 @@ public class GameManager : MonoBehaviour
        
         currentObstacle.transform.parent = transform;
 
-        CreateGold();
+        //CreateGold();
+        CreatePowerUp();
 
         listObstacle.Add(currentObstacle);
 
@@ -254,7 +259,7 @@ public class GameManager : MonoBehaviour
 
     private void RandomPosition()
     {
-       addedPosition.x = Random.Range(-5, 5);
+       addedPosition.x = Random.Range(-1, 1);
     }
 
     IEnumerator GenerateObstacle()
@@ -330,9 +335,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void CreatePowerUp()
+    {
+        float powerUpProbability = Random.Range(0f, 1f);
+        if (powerUpProbability <= goldFrequecy)
+        {
+            Vector3 powerUpPosition = currentObstacle.transform.position + new Vector3(0, space / 2f, 0);
+            GameObject currentPowerUp = Instantiate(powerUpPrefabs[Random.Range(0,powerUpPrefabs.Length)], powerUpPosition, Quaternion.Euler(0, 0, 45)) as GameObject;
+
+            float powerUpFluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+
+            currentPowerUp.GetComponent<GoldController>().fluctuationRange = powerUpFluctuationRange;
+            currentPowerUp.GetComponent<GoldController>().movingSpeed = Random.Range(minObstacleSpeedFactor * 2, maxObstacleSpeedFactor * 2);
+
+            int indexPosition = Random.Range(0, 2);
+            if (indexPosition == 0)
+            {
+                currentPowerUp.transform.position += new Vector3(-powerUpFluctuationRange, 0, 0);
+            }
+            else
+            {
+                currentPowerUp.transform.position += new Vector3(powerUpFluctuationRange, 0, 0);
+            }
+            currentPowerUp.transform.parent = currentObstacle.transform;
+        }
+    }
+
     void RandomObstacleType()
     {
-        int index = Random.Range(0, 5);
+        int index = Random.Range(0, 6);
         if (index == 0) //Normal obstacle
         {
             obstaclePrefab = normalObstacle;
@@ -348,6 +379,10 @@ public class GameManager : MonoBehaviour
         else if (index == 3)//Electric obstacle
         {
             obstaclePrefab = electricObstacle;
+        }
+        else if (index == 4)
+        {
+            obstaclePrefab = sawRight;
         }
         else
         {

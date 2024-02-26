@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8693304646402999948}
   - component: {fileID: 979750264384944994}
   m_Layer: 0
-  m_Name: SawController
+  m_Name: SawController right
   m_TagString: NormalObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saw: {fileID: 6752832441807231746}
   movingSpeed: 1
-  fluctuationRange: 1
+  fluctuationRange: -1
 --- !u!1001 &5870310731457128019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.32
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}

@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 5462238}
   - component: {fileID: 11403384}
   m_Layer: 0
-  m_Name: Gold
-  m_TagString: Gold
+  m_Name: Stamina
+  m_TagString: Stamina
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
