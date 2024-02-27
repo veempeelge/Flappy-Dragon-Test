@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     public GameObject musicOnBtn;
     public GameObject musicOffBtn;
     public GameObject backToMainMenu;
+    public GameObject tutorialObject;
 
     [Header("Premium Features Buttons")]
     public GameObject watchRewardedAdBtn;
@@ -194,6 +195,7 @@ public class UIManager : MonoBehaviour
         dailyRewardBtn.SetActive(false);
         watchRewardedAdBtn.SetActive(false);
         backToMainMenu.SetActive(false);
+        tutorialObject.SetActive(true);
     }
 
     public void ShowGameOverUI()

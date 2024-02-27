@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public AnimationClip jump;
     public AnimationClip rotate;
     public Color gray;
+    public GameObject tutorialRight;
+    public GameObject tutorialLeft;
       
     private Rigidbody rigid;
     private Animator anim;
@@ -209,10 +211,12 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKey(KeyCode.D) || Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2) && GameManager.Instance.GameState == GameState.Playing)
         {
             MoveRight();
+            tutorialLeft.SetActive(false);
         }
         if ((Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2 ) && GameManager.Instance.GameState == GameState.Playing)
         {
             MoveLeft();
+            tutorialRight.SetActive(false);
         }
 
         // Fix position
