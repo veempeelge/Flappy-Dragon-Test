@@ -219,6 +219,12 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: dbdb78dd411324741ace97e0e8d21edb,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2534964839176971238, guid: a8b93c67b34cdfb47ae6e2e24a0ab845,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}
       propertyPath: m_Name
@@ -294,5 +300,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.011466811
+  m_Radius: 0.0078
   m_Center: {x: -0.00013685194, y: -0.000051001167, z: 0}

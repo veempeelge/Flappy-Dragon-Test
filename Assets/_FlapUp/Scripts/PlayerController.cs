@@ -251,7 +251,7 @@ public class PlayerController : MonoBehaviour
         if (!isFinishRotate)
         {
             isFinishRotate = true;
-            StartCoroutine(RotateParentPlayer()); //rotate player
+          //  StartCoroutine(RotateParentPlayer()); //rotate player
         }
     }
 
@@ -262,7 +262,7 @@ public class PlayerController : MonoBehaviour
         if (!isFinishRotate)
         {
             isFinishRotate = true;
-            StartCoroutine(RotateParentPlayer()); //rotate player
+           // StartCoroutine(RotateParentPlayer()); //rotate player
         }
     }
 
@@ -299,7 +299,7 @@ public class PlayerController : MonoBehaviour
         if (!isFinishRotate)
         {
             isFinishRotate = true;
-            StartCoroutine(RotateParentPlayer()); //rotate player
+            //StartCoroutine(RotateParentPlayer()); //rotate player
         }
     }
 
