@@ -242,6 +242,16 @@ public class PlayerController : MonoBehaviour
             boostingParticle.Stop();
             stamina = maxStamina;
         }
+
+        if (rigid.position.x > 4.538022f)
+        {
+            rigid.velocity = new Vector3(-sideForce, rigid.velocity.y, 0);
+        }
+
+        if (rigid.position.x < -4.538022f)
+        {
+            rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
+        }
     }
     void StopMove()
     {
@@ -362,6 +372,7 @@ public class PlayerController : MonoBehaviour
                     cameraController.ShakeCamera();
             }
 
+         
 
             if (other.tag == "NormalObstacle") //hit obstacle
             {
