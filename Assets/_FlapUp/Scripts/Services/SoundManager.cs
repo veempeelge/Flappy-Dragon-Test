@@ -60,7 +60,9 @@ namespace SgLib
             }
         }
 
-        private AudioSource _audioSource;
+
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioSource _flap;
         private PlayingState musicState = PlayingState.Stopped;
         private const string MUTE_PREF_KEY = "MutePreference";
         private const int MUTED = 1;
@@ -78,7 +80,7 @@ namespace SgLib
             else
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject);
+                //DontDestroyOnLoad(gameObject);
             }
         }
 
@@ -99,6 +101,22 @@ namespace SgLib
         {
             StartCoroutine(CRPlaySound(sound, autoScaleVolume, maxVolumeScale));
         }
+
+        public void PlaySoundFlap(Sound sound, bool autoScaleVolume = true, float maxVolumeScale = 1f)
+        {
+            _flap.PlayOneShot(sound.clip);
+        }
+
+        public void ChangePitch()
+        {
+            _flap.pitch += .5f;
+        }
+
+        public void ResetPitch()
+        {
+            _flap.pitch = .7f;
+        }
+        
 
         IEnumerator CRPlaySound(Sound sound, bool autoScaleVolume = true, float maxVolumeScale = 1f)
         {

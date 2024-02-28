@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
     float boostTimer;
     [SerializeField] Image staminaBar;
     bool canCollide = true;
+    int flapCount;
 
     void OnEnable()
     {
@@ -252,7 +253,12 @@ public class PlayerController : MonoBehaviour
         {
             rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
         }
+
+      
+
     }
+
+    
     void StopMove()
     {
         rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
@@ -260,7 +266,7 @@ public class PlayerController : MonoBehaviour
     private void MoveLeft()
     {
  
-        //SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
+     //   SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerLeft()); //add velocity for player
         if (!isFinishRotate)
         {
@@ -271,7 +277,7 @@ public class PlayerController : MonoBehaviour
 
     private void MoveRight()
     {
-        //SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
+      //  SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
         StartCoroutine(MoveSideForPlayerRight()); //add velocity for player
         if (!isFinishRotate)
         {
@@ -307,8 +313,14 @@ public class PlayerController : MonoBehaviour
 
     void Flap()
     {
-        
-        SoundManager.Instance.PlaySound(SoundManager.Instance.flap);
+        if (flapCount == 5)
+        {
+            SoundManager.Instance.ResetPitch();
+            flapCount = 0;
+        }
+        flapCount++;
+        SoundManager.Instance.PlaySoundFlap(SoundManager.Instance.flap);
+        SoundManager.Instance.ChangePitch();
         StartCoroutine(AddVelocityForPlayer()); //add velocity for player
         if (!isFinishRotate)
         {

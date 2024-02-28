@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
     float randomizeX;
 
     public bool endless;
+ 
     void OnEnable()
     {
         PlayerController.PlayerDied += PlayerController_PlayerDied;

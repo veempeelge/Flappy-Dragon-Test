@@ -4893,6 +4893,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuperDragone_Spring_TEST
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf2b5a454b9011c4daf7697c7868df12,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4947,10 +4952,12 @@ MonoBehaviour:
     type: 3}
   boostParticlePrefab: {fileID: 19862024, guid: 0bff2f56bc20ec546926ad422cd08a6e,
     type: 3}
-  boostingParticle: {fileID: 7213445370736983428}
+  boostingParticle: {fileID: 0}
   jump: {fileID: 7400000, guid: 2186ada5917f5504c92217b03c15089b, type: 2}
   rotate: {fileID: 7400000, guid: 6c5d70fd7116cf74e891df8b25884c50, type: 2}
   gray: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
+  tutorialRight: {fileID: 0}
+  tutorialLeft: {fileID: 0}
   stamina: 5
   staminaBar: {fileID: 0}
 --- !u!54 &6335052870295921996
@@ -4999,8 +5006,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.5119758, z: 0.5515845}
-  m_Center: {x: -6.963471e-18, y: 0.7044039, z: 0.00439626}
+  m_Size: {x: 1, y: 1.5424364, z: 0.5510167}
+  m_Center: {x: -9.5952025e-18, y: 0.7089406, z: 0.0045814514}
 --- !u!4 &5627081829001378208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf2b5a454b9011c4daf7697c7868df12,

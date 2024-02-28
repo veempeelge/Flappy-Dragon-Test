@@ -7,6 +7,7 @@ public class SawController : MonoBehaviour
     
     public float movingSpeed;
     public float fluctuationRange;
+    public float startDelay;
 
     private float firstRightObPosition;
     private float maxLengthMove;
@@ -28,6 +29,7 @@ public class SawController : MonoBehaviour
 
     IEnumerator MovingSaw()
     {
+        yield return new WaitForSeconds(startDelay);
         while (true)
         {
             SawTurn = SawTurn * (-1);

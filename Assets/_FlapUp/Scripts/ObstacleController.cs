@@ -7,11 +7,13 @@ public class ObstacleController : MonoBehaviour
     public GameObject rightOb;
     public float movingSpeed;
     public float fluctuationRange;
+    public float startDelay = .1f;
 
     private float firstRightObPosition;
     private float maxLengthMove;
     private int leftTurn = 1;
     private int rightTurn = 1;
+    
 
     // Use this for initialization
     void Start()
@@ -27,8 +29,11 @@ public class ObstacleController : MonoBehaviour
 
     IEnumerator MovingLeftOb()
     {
+        yield return new WaitForSeconds(startDelay);
+
         while (true)
         {
+
             leftTurn = leftTurn * (-1);
 
             Vector3 startPos = leftOb.transform.position;
@@ -61,6 +66,8 @@ public class ObstacleController : MonoBehaviour
 
     IEnumerator MovingRightOb()
     {
+        yield return new WaitForSeconds(startDelay);
+
         while (true)
         {
             rightTurn = rightTurn * (-1);

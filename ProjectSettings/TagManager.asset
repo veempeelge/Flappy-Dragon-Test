@@ -14,6 +14,8 @@ TagManager:
   - TheGround
   - Boost
   - Stamina
+  - ' Left Wall'
+  - Right Wall
   layers:
   - Default
   - TransparentFX
