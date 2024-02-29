@@ -16,6 +16,7 @@ TagManager:
   - Stamina
   - ' Left Wall'
   - Right Wall
+  - CoinTextObject
   layers:
   - Default
   - TransparentFX

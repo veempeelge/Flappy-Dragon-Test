@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour
     bool canCollide = true;
     int flapCount;
 
+    [SerializeField] CoinScore CoinScore;
+
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -348,7 +350,7 @@ public class PlayerController : MonoBehaviour
             if (other.tag == "Finish")
             {
                 SceneManager.LoadScene("Lv Finish");
-
+                CoinScore.LevelFinish();
                 Debug.Log("Lvl finished");
             }
             if (other.tag == "Gold") //Hit gold
@@ -357,6 +359,8 @@ public class PlayerController : MonoBehaviour
                 CoinManager.Instance.AddCoins(1);
                 CreateParticle(goldParticlePrefab, other.transform.position);
                 Destroy(other.gameObject);
+
+                CoinScore.GetCoins();
 
             }
             else if (other.tag == "Boost")
