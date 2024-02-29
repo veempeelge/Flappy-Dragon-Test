@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,17 @@ public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Button endless, level;
+    public Button endless, level, credit;
     void Start()
     {
         endless.onClick.AddListener(GoToEndless);
         level.onClick.AddListener(GoToLevel);
+        credit.onClick.AddListener(GoToCredit);
+    }
+
+    private void GoToCredit()
+    {
+        SceneManager.LoadScene("Credit");
     }
 
     // Update is called once per frame
@@ -28,6 +35,6 @@ public class MainMenu : MonoBehaviour
 
     void GoToLevel()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Select Level");
     }
 }

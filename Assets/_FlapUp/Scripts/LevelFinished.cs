@@ -8,12 +8,11 @@ using UnityEngine.UI;
 public class LevelFinished : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] Button nextLevel;
+    [SerializeField] Button selectLevel;
     [SerializeField] Button Home;
-    [SerializeField] int currentLevel;
     void Start()
     {
-        nextLevel.onClick.AddListener(NextScene);
+        selectLevel.onClick.AddListener(NextScene);
         Home.onClick.AddListener(HomeScene);
     }
 
@@ -24,7 +23,7 @@ public class LevelFinished : MonoBehaviour
 
     private void NextScene()
     {
-        SceneManager.LoadScene($"Level + {currentLevel}");
+        SceneManager.LoadScene("Select Level");
     }
 
     // Update is called once per frame

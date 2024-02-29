@@ -5,6 +5,7 @@ using System;
 using UnityEngine.UI;
 using TMPro;
 using JetBrains.Annotations;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -346,9 +347,7 @@ public class PlayerController : MonoBehaviour
         {
             if (other.tag == "Finish")
             {
-                //finish
-                //go next level (scene)
-                // end screen
+                SceneManager.LoadScene("Lv Finish");
 
                 Debug.Log("Lvl finished");
             }
