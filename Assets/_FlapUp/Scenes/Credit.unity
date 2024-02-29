@@ -21372,12 +21372,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Christya Angel - 3D Model, Animation, Sound
+  m_text: 'Project Manager - Datu Yogabrata
 
-    Datu Yogabrata - Project
-    Manager
+    Programmer - Mario Gunadi
 
-    Mario Gunadi - Programming
+    Assets
+    - Christya Angel
 
 
     template by SgLib Games
@@ -21858,63 +21858,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1446123376
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 155538, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_Name
-      value: SoundManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 393e1012855d44eb08111c95269092e0, type: 3}
 --- !u!1 &1515765344
 GameObject:
   m_ObjectHideFlags: 0
@@ -30652,4 +30595,3 @@ SceneRoots:
   - {fileID: 2058009160}
   - {fileID: 206225724}
   - {fileID: 1383905067}
-  - {fileID: 1446123376}

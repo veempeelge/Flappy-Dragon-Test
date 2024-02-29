@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace SgLib
 {
@@ -40,6 +41,8 @@ namespace SgLib
 
         public static event OnMusicStatusChanged MusicStatusChanged;
 
+       
+
         enum PlayingState
         {
             Playing,
@@ -73,6 +76,7 @@ namespace SgLib
 
         void Awake()
         {
+            
             if (Instance)
             {
                 DestroyImmediate(gameObject);
@@ -80,7 +84,7 @@ namespace SgLib
             else
             {
                 Instance = this;
-                //DontDestroyOnLoad(gameObject);
+              //DontDestroyOnLoad(gameObject);
             }
         }
 
@@ -88,8 +92,9 @@ namespace SgLib
         {
             // Set mute based on the valued stored in PlayerPrefs
             SetMute(IsMuted());
-        }
 
+           
+        }
         /// <summary>
         /// Plays the given sound with option to progressively scale down volume of multiple copies of same sound playing at
         /// the same time to eliminate the issue that sound amplitude adds up and becomes too loud.
