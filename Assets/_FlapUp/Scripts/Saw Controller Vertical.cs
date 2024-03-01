@@ -1,10 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class SawController : MonoBehaviour
+public class SawControllerVertical : MonoBehaviour
 {
     public GameObject saw;
-
+    
     public float movingSpeed;
     public float fluctuationRange;
     public float startDelay;
@@ -27,7 +27,7 @@ public class SawController : MonoBehaviour
         StartCoroutine(MovingObWhenGameOver());
     }
 
-
+ 
 
 
     IEnumerator MovingSaw()
@@ -38,7 +38,7 @@ public class SawController : MonoBehaviour
             SawTurn = SawTurn * (-1);
 
             Vector3 startPos = saw.transform.position;
-
+            
 
             if (SawTurn < 0)
             {
@@ -48,7 +48,7 @@ public class SawController : MonoBehaviour
                 }
                 else if (horizontal)
                 {
-                    endPos = saw.transform.position + new Vector3(-fluctuationRange, 0, 0);
+                    endPos = saw.transform.position + new Vector3(-fluctuationRange,0, 0);
                 }
                 else if (diagonalUpLeft)
                 {
@@ -111,19 +111,19 @@ public class SawController : MonoBehaviour
                 {
                     //float addedDistance = (firstRightObPosition + maxLengthMove) - currentRightObXPosition;
 
-                    // Vector3 startPosLeftOb = saw.transform.position;
-                    // Vector3 endPosLeftOb = saw.transform.position + new Vector3(-addedDistance, 0, 0);
+                   // Vector3 startPosLeftOb = saw.transform.position;
+                   // Vector3 endPosLeftOb = saw.transform.position + new Vector3(-addedDistance, 0, 0);
 
 
-
+          
 
                     float t = 0;
                     while (t < GameManager.Instance.minObstacleSpeedFactor / 2)
                     {
                         t += Time.deltaTime;
                         float fraction = t / (GameManager.Instance.minObstacleSpeedFactor / 2);
-                        //   saw.transform.position = Vector3.Lerp(startPosLeftOb, endPosLeftOb, fraction);
-
+                     //   saw.transform.position = Vector3.Lerp(startPosLeftOb, endPosLeftOb, fraction);
+                 
                         yield return null;
                     }
 

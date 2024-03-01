@@ -1047,13 +1047,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
+      propertyPath: horizontal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
+        type: 3}
       propertyPath: movingSpeed
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: fluctuationRange
-      value: -4
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1938137108515245384, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
@@ -2435,13 +2440,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
+      propertyPath: horizontal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
+        type: 3}
       propertyPath: movingSpeed
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: fluctuationRange
-      value: 4
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1938137108515245384, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
