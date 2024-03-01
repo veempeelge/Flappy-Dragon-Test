@@ -725,15 +725,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -827,6 +827,7 @@ MonoBehaviour:
   gameManager: {fileID: 842813856}
   player: {fileID: 502034565}
   goldParticlePrefab: {fileID: 19862024, guid: a313b11c12cdb944289aa8f6a52726c5, type: 3}
+  staminaParticlePrefab: {fileID: 0}
   hitGroundParticlePrefab: {fileID: 19881106, guid: 973ca0c97462c75429023027dcc7eaf3,
     type: 3}
   boostParticlePrefab: {fileID: 19862024, guid: 0bff2f56bc20ec546926ad422cd08a6e,
@@ -11179,15 +11180,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11227,6 +11228,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319022, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -18663,18 +18668,6 @@ PrefabInstance:
       value: Stamina (1)
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -20513,18 +20506,6 @@ PrefabInstance:
       value: Stamina (3)
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
       objectReference: {fileID: 0}
@@ -20589,15 +20570,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21661,6 +21642,12 @@ PrefabInstance:
       propertyPath: boostingParticle
       value: 
       objectReference: {fileID: 1011247313}
+    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
+        type: 3}
+      propertyPath: staminaParticlePrefab
+      value: 
+      objectReference: {fileID: 19862024, guid: dc60bab7b96c5d541ac47074518c44c7,
+        type: 3}
     - target: {fileID: 4998073855145599770, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
       propertyPath: m_Name
@@ -23479,15 +23466,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 86.56
       objectReference: {fileID: 0}
     - target: {fileID: 417638, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23905,19 +23892,6 @@ PrefabInstance:
     - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: background.clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a78daee23b58ce94794fa8f0307ec60b, type: 3}
-    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: maxSimultaneousSounds
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424564246828076941, guid: 393e1012855d44eb08111c95269092e0,
-        type: 3}
-      propertyPath: m_Pitch
-      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25345,6 +25319,11 @@ PrefabInstance:
       propertyPath: season
       value: 
       objectReference: {fileID: 281622634}
+    - target: {fileID: 2250958214229793905, guid: f8e4600367e7c4d4ab657614a4904a5f,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6959110661578352393, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
       propertyPath: m_LocalPosition.x

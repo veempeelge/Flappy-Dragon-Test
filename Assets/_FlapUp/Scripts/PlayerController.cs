@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public GameManager gameManager;
     public GameObject player;
     public ParticleSystem goldParticlePrefab;
+    public ParticleSystem staminaParticlePrefab;
     public ParticleSystem hitGroundParticlePrefab;
     public ParticleSystem boostParticlePrefab;
     public ParticleSystem boostingParticle;
@@ -382,6 +383,8 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Stamina Up");
                 Destroy(other.gameObject);
                 stamina = maxStamina;
+                CreateParticle(staminaParticlePrefab, other.transform.position);
+                SoundManager.Instance.PlaySound(SoundManager.Instance.stamina);
             }
             else
             {

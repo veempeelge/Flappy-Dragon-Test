@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb546c7d8b6c4aa0a5a0d15b48c91ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSimultaneousSounds: 3
+  maxSimultaneousSounds: 1
   background:
-    clip: {fileID: 8300000, guid: f06376c8d1a22f94fad20244edbe3c1f, type: 3}
+    clip: {fileID: 8300000, guid: a78daee23b58ce94794fa8f0307ec60b, type: 3}
     simultaneousPlayCount: 0
   button:
     clip: {fileID: 8300000, guid: f40707d3138e7d74994d4507578b2420, type: 3}
@@ -76,6 +76,9 @@ MonoBehaviour:
     simultaneousPlayCount: 0
   unlock:
     clip: {fileID: 8300000, guid: 706835b63bfbe4069bca37208d7e5cd9, type: 3}
+    simultaneousPlayCount: 0
+  stamina:
+    clip: {fileID: 8300000, guid: 91d8f3799f4eb1e4fb8b281e7d5678f2, type: 3}
     simultaneousPlayCount: 0
   _audioSource: {fileID: 8229856}
   _flap: {fileID: 8424564246828076941}
@@ -188,7 +191,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.7
   Loop: 0
   Mute: 0
   Spatialize: 0

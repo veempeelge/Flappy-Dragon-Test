@@ -32,6 +32,7 @@ namespace SgLib
         public Sound item;
         public Sound hit;
         public Sound unlock;
+        public Sound stamina;
 
         public delegate void OnMuteStatusChanged(bool isMuted);
 
