@@ -64,6 +64,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] CoinScore CoinScore;
 
+    [SerializeField] parallax parallax;
+
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -129,7 +131,6 @@ public class PlayerController : MonoBehaviour
         anim = player.GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         playerPosition = player.transform.position;
-        
     }
 	
     // Update is called once per frame
@@ -160,6 +161,7 @@ public class PlayerController : MonoBehaviour
                 if (rigid.velocity.y < 0)
                 {
                     rigid.velocity = new Vector3(0, 0, 0);
+
                 }
                 //if (clickCount == 0)
                 //{
@@ -316,6 +318,7 @@ public class PlayerController : MonoBehaviour
 
     void Flap()
     {
+        parallax.FlapUP();
         if (flapCount == 5)
         {
             SoundManager.Instance.ResetPitch();

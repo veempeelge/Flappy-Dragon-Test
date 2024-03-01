@@ -19,6 +19,8 @@ public class SeasonBackgroundController : MonoBehaviour
     Material currentGroundMaterial;
     Material currentMaterial;
 
+    [SerializeField] GameObject[] parallaxImages;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,12 +37,12 @@ public class SeasonBackgroundController : MonoBehaviour
         season.SetText("Its " + seasonText[index] + "!");
 
         particleSystems[index].Play();
+        parallaxImages[index].SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
         ChangeObjectMaterial(whatMaterial);
         ChangeGroundMaterial(whatGroundMaterial);
     }

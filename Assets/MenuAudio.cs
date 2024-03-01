@@ -18,7 +18,11 @@ public class MenuAudio : MonoBehaviour
     {
         if (targetSceneNames.Contains(SceneManager.GetActiveScene().name))
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
+        }
+        else if (!targetSceneNames.Contains(SceneManager.GetActiveScene().name))
+        { 
+            this.gameObject.SetActive(true); 
         }
     }
 }
