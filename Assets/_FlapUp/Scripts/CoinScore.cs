@@ -42,7 +42,7 @@ public class CoinScore : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("GameObject with the specified name not found.");
+            return;
         }
     }
 

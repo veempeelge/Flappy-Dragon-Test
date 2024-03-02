@@ -17,6 +17,7 @@ TagManager:
   - ' Left Wall'
   - Right Wall
   - CoinTextObject
+  - MainSong
   layers:
   - Default
   - TransparentFX

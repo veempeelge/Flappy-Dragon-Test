@@ -141,7 +141,6 @@ public class PlayerController : MonoBehaviour
         if (Camera.main.WorldToScreenPoint(transform.position).y < -30 && GameManager.Instance.GameState != GameState.GameOver)
         {
             playerFallDown = true;
-            anim.Play(rotate.name);
             Die();
         }
 
@@ -561,7 +560,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitToDisableKinematic()
     {
         yield return new WaitForSeconds(0.5f);
-        anim.Play(rotate.name);
         rigid.isKinematic = false;
     }
 
