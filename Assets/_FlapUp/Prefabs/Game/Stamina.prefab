@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 417638}
   - component: {fileID: 3371366}
   - component: {fileID: 2319022}
-  - component: {fileID: 6409780}
   - component: {fileID: 9523248}
   - component: {fileID: 5462238}
   - component: {fileID: 11403384}
   - component: {fileID: 4591955516292292338}
+  - component: {fileID: 7238824037905075015}
   m_Layer: 0
   m_Name: Stamina
   m_TagString: Stamina
@@ -89,28 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6409780
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170474}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4711208715938537054, guid: 51b65e94561f2624cbb647f68fa23835, type: 3}
 --- !u!95 &9523248
 Animator:
   serializedVersion: 5
@@ -191,3 +169,24 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &7238824037905075015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170474}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.015791064, y: 0.0116642155, z: 0.021507725}
+  m_Center: {x: 0.00023365144, y: -0.00030035205, z: 0.0005540085}
