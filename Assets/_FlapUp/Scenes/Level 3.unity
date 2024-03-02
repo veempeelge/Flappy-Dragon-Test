@@ -748,6 +748,8 @@ MonoBehaviour:
   hasHitGround: 0
   gameManager: {fileID: 842813856}
   player: {fileID: 502034565}
+  flyObj: {fileID: 0}
+  dieObj: {fileID: 0}
   goldParticlePrefab: {fileID: 19862024, guid: a313b11c12cdb944289aa8f6a52726c5, type: 3}
   staminaParticlePrefab: {fileID: 0}
   hitGroundParticlePrefab: {fileID: 19881106, guid: 973ca0c97462c75429023027dcc7eaf3,
@@ -760,6 +762,7 @@ MonoBehaviour:
   gray: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
   tutorialRight: {fileID: 0}
   tutorialLeft: {fileID: 0}
+  anim: {fileID: 0}
   stamina: 5
   staminaBar: {fileID: 0}
   CoinScore: {fileID: 0}
@@ -4919,6 +4922,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697746049}
   m_CullTransparentMesh: 1
+--- !u!1001 &701991970
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.956307
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.7590475
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.495193
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a435b9333617fc44fb881e879726214d, type: 2}
+    - target: {fileID: -7511558181221131132, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a435b9333617fc44fb881e879726214d, type: 2}
+    - target: {fileID: 919132149155446097, guid: deefcbc1ebd48cc45b9d21eab725756c,
+        type: 3}
+      propertyPath: m_Name
+      value: vines
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: deefcbc1ebd48cc45b9d21eab725756c, type: 3}
 --- !u!1 &710321727
 GameObject:
   m_ObjectHideFlags: 0
@@ -5831,6 +5912,8 @@ MonoBehaviour:
   saw: {fileID: 6672759710502727884, guid: 977efb841263aa8408310603222a5e09, type: 3}
   sawRight: {fileID: 6672759710502727884, guid: 9797587046e8b0c4e8f46b640252e08c,
     type: 3}
+  sawUpRight: {fileID: 0}
+  sawUpLeft: {fileID: 0}
   initialObstacle: 3
   space: 7
   obstacleCounter: 4
@@ -22915,3 +22998,4 @@ SceneRoots:
   - {fileID: 3115003842146396957}
   - {fileID: 689846689}
   - {fileID: 69879657}
+  - {fileID: 701991970}

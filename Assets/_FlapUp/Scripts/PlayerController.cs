@@ -224,6 +224,7 @@ public class PlayerController : MonoBehaviour
             tutorialRight.SetActive(false);
         }
 
+
         // Fix position
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }

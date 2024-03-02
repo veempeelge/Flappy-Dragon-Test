@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
   theGround: {fileID: 0}
-  followUpSpeedFactor: 5
+  followUpSpeedFactor: 10
   isStopMoving: 0
   shakeDuration: 0.1
   shakeAmount: 0.3
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxImage: {fileID: 3699454933042274414}
-  parallaxScale: 2
+  parallaxScale: 0.5
 --- !u!1 &3699454933042274414
 GameObject:
   m_ObjectHideFlags: 0

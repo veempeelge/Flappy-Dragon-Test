@@ -454,6 +454,8 @@ MonoBehaviour:
   hasHitGround: 0
   gameManager: {fileID: 842813856}
   player: {fileID: 502034565}
+  flyObj: {fileID: 0}
+  dieObj: {fileID: 0}
   goldParticlePrefab: {fileID: 19862024, guid: a313b11c12cdb944289aa8f6a52726c5, type: 3}
   staminaParticlePrefab: {fileID: 0}
   hitGroundParticlePrefab: {fileID: 19881106, guid: 973ca0c97462c75429023027dcc7eaf3,
@@ -466,6 +468,7 @@ MonoBehaviour:
   gray: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
   tutorialRight: {fileID: 0}
   tutorialLeft: {fileID: 0}
+  anim: {fileID: 0}
   stamina: 5
   staminaBar: {fileID: 0}
   CoinScore: {fileID: 0}
@@ -2578,12 +2581,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458032623}
   m_CullTransparentMesh: 1
---- !u!198 &477632916 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7213445370736983428, guid: 124901244c4157a4da47beffb89824be,
-    type: 3}
-  m_PrefabInstance: {fileID: 2373853082413234496}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &502034565
 GameObject:
   m_ObjectHideFlags: 0
@@ -4571,14 +4568,14 @@ MonoBehaviour:
   initialObstacle: 3
   space: 7
   obstacleCounter: 4
-  maxObstacleFluctuationRange: 4
+  maxObstacleFluctuationRange: 5
   minObstacleFluctuationRange: 3
   scoreToUpdateValue: 10
   decreaseObstacleSpeedValue: 0.05
-  minObstacleSpeedFactor: 1.5
-  maxObstacleSpeedFactor: 1.5
-  minimumMinObstacleSpeedFactor: 0.4
-  minimumMaxObstacleSpeedFactor: 1
+  minObstacleSpeedFactor: 1
+  maxObstacleSpeedFactor: 3
+  minimumMinObstacleSpeedFactor: 1
+  minimumMaxObstacleSpeedFactor: 2
   goldFrequecy: 0.613
   endless: 1
 --- !u!1 &843388496
@@ -12804,11 +12801,6 @@ PrefabInstance:
       propertyPath: season
       value: 
       objectReference: {fileID: 281622634}
-    - target: {fileID: 1963187087368690784, guid: f8e4600367e7c4d4ab657614a4904a5f,
-        type: 3}
-      propertyPath: parallaxScale
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6959110661578352393, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21349,17 +21341,6 @@ PrefabInstance:
       propertyPath: tutorialRight
       value: 
       objectReference: {fileID: 1407463381}
-    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
-        type: 3}
-      propertyPath: boostingParticle
-      value: 
-      objectReference: {fileID: 477632916}
-    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
-        type: 3}
-      propertyPath: staminaParticlePrefab
-      value: 
-      objectReference: {fileID: 19862024, guid: dc60bab7b96c5d541ac47074518c44c7,
-        type: 3}
     - target: {fileID: 4998073855145599770, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
       propertyPath: m_Name
