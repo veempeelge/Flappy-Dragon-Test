@@ -4562,7 +4562,7 @@ MonoBehaviour:
   electricObstacle: {fileID: 155590, guid: c1f824e0bfad84544b4aae3091c87689, type: 3}
   electricParticle: {fileID: 19826806, guid: c5ab68b1aee544f468171be6bc375b3e, type: 3}
   saw: {fileID: 6672759710502727884, guid: 977efb841263aa8408310603222a5e09, type: 3}
-  sawRight: {fileID: 6672759710502727884, guid: 9797587046e8b0c4e8f46b640252e08c,
+  sawRight: {fileID: 2487855942234472747, guid: cf082cf1687807a458401a4574c6db65,
     type: 3}
   sawUpRight: {fileID: 5408037006039626685, guid: b9721370b419bde41a00ed3472121491,
     type: 3}

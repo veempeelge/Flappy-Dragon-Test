@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3802617220966037621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.06, y: 0, z: 0}
   m_LocalScale: {x: 5.49, y: -0.2, z: 0.18}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saw: {fileID: 6752832441807231746}
   movingSpeed: 1
-  fluctuationRange: 1
+  fluctuationRange: 3
   startDelay: 0
   vertical: 0
   horizontal: 1
@@ -167,12 +167,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.481192
+      value: 24.48119
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1
+      value: 2.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}
@@ -222,7 +222,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5754084199372789682, guid: dbdb78dd411324741ace97e0e8d21edb,
         type: 3}

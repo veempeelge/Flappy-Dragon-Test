@@ -171,8 +171,14 @@ public class GameManager : MonoBehaviour
             }
             else 
             {
-                currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(-minObstacleFluctuationRange, maxObstacleFluctuationRange);
-                currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(-minObstacleSpeedFactor, maxObstacleSpeedFactor);
+                currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
+                currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+
+                if (currentObstacle.GetComponent<SawController>().fluctuationRange == 0 || currentObstacle.GetComponent<SawController>().movingSpeed == 0)
+                {
+                   
+                }
+                
             }
 
 
