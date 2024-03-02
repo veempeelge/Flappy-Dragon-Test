@@ -455,6 +455,7 @@ MonoBehaviour:
   gameManager: {fileID: 842813856}
   player: {fileID: 502034565}
   goldParticlePrefab: {fileID: 19862024, guid: a313b11c12cdb944289aa8f6a52726c5, type: 3}
+  staminaParticlePrefab: {fileID: 0}
   hitGroundParticlePrefab: {fileID: 19881106, guid: 973ca0c97462c75429023027dcc7eaf3,
     type: 3}
   boostParticlePrefab: {fileID: 19862024, guid: 0bff2f56bc20ec546926ad422cd08a6e,
@@ -4562,6 +4563,10 @@ MonoBehaviour:
   electricParticle: {fileID: 19826806, guid: c5ab68b1aee544f468171be6bc375b3e, type: 3}
   saw: {fileID: 6672759710502727884, guid: 977efb841263aa8408310603222a5e09, type: 3}
   sawRight: {fileID: 6672759710502727884, guid: 9797587046e8b0c4e8f46b640252e08c,
+    type: 3}
+  sawUpRight: {fileID: 5408037006039626685, guid: b9721370b419bde41a00ed3472121491,
+    type: 3}
+  sawUpLeft: {fileID: 5693194147095197233, guid: 82b889d36f464d544adf51ab36059db8,
     type: 3}
   initialObstacle: 3
   space: 7

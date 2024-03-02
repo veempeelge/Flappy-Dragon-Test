@@ -15,13 +15,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
+      propertyPath: horizontal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
+        type: 3}
       propertyPath: movingSpeed
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: fluctuationRange
-      value: -5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1938137108515245384, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
@@ -76,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 6672759710502727884, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: m_Name
-      value: SawController (02) Variant
+      value: SawVertical
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

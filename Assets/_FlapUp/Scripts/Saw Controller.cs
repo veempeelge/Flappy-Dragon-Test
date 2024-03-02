@@ -48,7 +48,7 @@ public class SawController : MonoBehaviour
                 }
                 else if (horizontal)
                 {
-                    endPos = saw.transform.position + new Vector3(-fluctuationRange, 0, 0);
+                    endPos = saw.transform.position + new Vector3(fluctuationRange, 0, 0);
                 }
                 else if (diagonalUpLeft)
                 {
@@ -68,7 +68,7 @@ public class SawController : MonoBehaviour
                 }
                 else if (horizontal)
                 {
-                    endPos = saw.transform.position + new Vector3(fluctuationRange, 0, 0);
+                    endPos = saw.transform.position + new Vector3(-fluctuationRange, 0, 0);
                 }
                 else if (diagonalUpLeft)
                 {

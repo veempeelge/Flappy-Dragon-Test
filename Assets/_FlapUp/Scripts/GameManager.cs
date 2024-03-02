@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     public ParticleSystem electricParticle;
     public GameObject saw;
     public GameObject sawRight;
+    public GameObject sawUpRight, sawUpLeft;
     
 
     [Header("Gameplay Config")]
@@ -168,10 +169,10 @@ public class GameManager : MonoBehaviour
                 currentObstacle.GetComponent<ObstacleController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
                 currentObstacle.GetComponent<ObstacleController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
             }
-            else
+            else 
             {
-                currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
-                currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
+                currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(-minObstacleFluctuationRange, maxObstacleFluctuationRange);
+                currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(-minObstacleSpeedFactor, maxObstacleSpeedFactor);
             }
 
 
@@ -198,7 +199,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        randomizeX = Random.Range(-1, 1);
+        randomizeX = Random.Range(-1f, 1f);
     }
     public void StartGame()
     {
@@ -260,7 +261,7 @@ public class GameManager : MonoBehaviour
 
     private void RandomPosition()
     {
-       addedPosition.x = Random.Range(-1, 1);
+       //addedPosition.x = Random.Range(-1, 1);
     }
 
     IEnumerator GenerateObstacle()
@@ -364,7 +365,7 @@ public class GameManager : MonoBehaviour
 
     void RandomObstacleType()
     {
-        int index = Random.Range(0, 6);
+        int index = Random.Range(0, 8);
         if (index == 0) //Normal obstacle
         {
             obstaclePrefab = normalObstacle;
@@ -384,6 +385,14 @@ public class GameManager : MonoBehaviour
         else if (index == 4)
         {
             obstaclePrefab = sawRight;
+        }
+        else if (index == 5)
+        {
+            obstaclePrefab = sawUpRight;
+        }
+        else if(index == 6)
+        {
+            obstaclePrefab = sawUpLeft;
         }
         else
         {
