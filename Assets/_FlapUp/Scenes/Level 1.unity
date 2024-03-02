@@ -826,6 +826,8 @@ MonoBehaviour:
   hasHitGround: 0
   gameManager: {fileID: 842813856}
   player: {fileID: 502034565}
+  flyObj: {fileID: 0}
+  dieObj: {fileID: 0}
   goldParticlePrefab: {fileID: 19862024, guid: a313b11c12cdb944289aa8f6a52726c5, type: 3}
   staminaParticlePrefab: {fileID: 0}
   hitGroundParticlePrefab: {fileID: 19881106, guid: 973ca0c97462c75429023027dcc7eaf3,
@@ -834,10 +836,11 @@ MonoBehaviour:
     type: 3}
   boostingParticle: {fileID: 1011247313}
   jump: {fileID: 7400000, guid: 2186ada5917f5504c92217b03c15089b, type: 2}
-  rotate: {fileID: 7400000, guid: 6c5d70fd7116cf74e891df8b25884c50, type: 2}
+  rotate: {fileID: 0}
   gray: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
   tutorialRight: {fileID: 0}
   tutorialLeft: {fileID: 0}
+  anim: {fileID: 0}
   stamina: 5
   staminaBar: {fileID: 1818107148}
   CoinScore: {fileID: 0}
@@ -1058,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: fluctuationRange
-      value: 4
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1938137108515245384, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
@@ -21654,12 +21657,6 @@ PrefabInstance:
       propertyPath: boostingParticle
       value: 
       objectReference: {fileID: 1011247313}
-    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
-        type: 3}
-      propertyPath: staminaParticlePrefab
-      value: 
-      objectReference: {fileID: 19862024, guid: dc60bab7b96c5d541ac47074518c44c7,
-        type: 3}
     - target: {fileID: 4998073855145599770, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
       propertyPath: m_Name
@@ -23905,6 +23902,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
+      propertyPath: maxSimultaneousSounds
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25396,6 +25397,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 522258475}
+    - target: {fileID: 7949792482220429375, guid: f8e4600367e7c4d4ab657614a4904a5f,
+        type: 3}
+      propertyPath: followUpSpeedFactor
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

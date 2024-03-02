@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     [Header("Gameplay Preferences")]
     public GameManager gameManager;
     public GameObject player;
+    public GameObject flyObj, dieObj;
     public ParticleSystem goldParticlePrefab;
     public ParticleSystem staminaParticlePrefab;
     public ParticleSystem hitGroundParticlePrefab;
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
     public GameObject tutorialLeft;
       
     private Rigidbody rigid;
-    private Animator anim;
+    [SerializeField] private Animator anim;
     private int turn = 1;
     private bool isFinishRotate = false;
     private CameraController cameraController;
@@ -127,9 +128,6 @@ public class PlayerController : MonoBehaviour
             main.GetComponent<MeshFilter>().mesh = charMesh;
             main.GetComponent<Renderer>().material = charMaterial;
         }
-
-
-        anim = player.GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         playerPosition = player.transform.position;
     }
@@ -277,7 +275,7 @@ public class PlayerController : MonoBehaviour
         if (!isFinishRotate)
         {
             isFinishRotate = true;
-          //  StartCoroutine(RotateParentPlayer()); //rotate player
+           StartCoroutine(RotateParentPlayer()); //rotate player
         }
     }
 
@@ -288,7 +286,7 @@ public class PlayerController : MonoBehaviour
         if (!isFinishRotate)
         {
             isFinishRotate = true;
-           // StartCoroutine(RotateParentPlayer()); //rotate player
+           StartCoroutine(RotateParentPlayer()); //rotate player
         }
     }
 
@@ -296,21 +294,20 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForFixedUpdate();
         rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
-        anim.SetTrigger(jump.name);
+       
     }
 
     IEnumerator MoveSideForPlayerLeft()
     {
         yield return new WaitForFixedUpdate();
         rigid.velocity = new Vector3(-sideForce, rigid.velocity.y, 0);
-        anim.SetTrigger(jump.name);
+ 
     }
     IEnumerator AddVelocityForPlayer()
     {
 
         yield return new WaitForFixedUpdate();
         rigid.AddForce(rigid.velocity.x, jumpForce, 0);
-        anim.SetTrigger(jump.name);
         if (rigid.velocity.y > maxVelocity)
         {
             rigid.velocity = new Vector3(rigid.velocity.x, maxVelocity - 1, 0);
@@ -332,8 +329,9 @@ public class PlayerController : MonoBehaviour
         if (!isFinishRotate)
         {
             isFinishRotate = true;
-            //StartCoroutine(RotateParentPlayer()); //rotate player
+            StartCoroutine(RotateParentPlayer()); //rotate player
         }
+        anim.SetTrigger("Fly");
     }
 
     void Die()
@@ -343,6 +341,8 @@ public class PlayerController : MonoBehaviour
         {
             PlayerDied();
         }
+        flyObj.SetActive(false);
+        dieObj.SetActive(true) ;
     }
 
 
