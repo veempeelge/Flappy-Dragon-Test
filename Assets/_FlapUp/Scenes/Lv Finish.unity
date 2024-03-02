@@ -19112,7 +19112,7 @@ GameObject:
   - component: {fileID: 864160967}
   m_Layer: 0
   m_Name: Main Menu Sound
-  m_TagString: Untagged
+  m_TagString: MainSong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19129,6 +19129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3db781cea1999428387532c636e4fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameToCount: MainSong
   targetSceneNames:
   - Level 1
   - Level 2
