@@ -1153,6 +1153,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11403384, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
+      propertyPath: fluctuationRange
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4174,11 +4178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: movingSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: fluctuationRange
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5209,11 +5213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: movingSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: fluctuationRange
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6032,11 +6036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: movingSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: fluctuationRange
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17380,12 +17384,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
+      propertyPath: startDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: movingSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11405166, guid: f0e0ded592ca71d41b964bd62f2a5c89, type: 3}
       propertyPath: fluctuationRange
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saw: {fileID: 6752832441807231746}
   movingSpeed: 1
-  fluctuationRange: 3
+  fluctuationRange: 4
   startDelay: 0
   vertical: 0
   horizontal: 1

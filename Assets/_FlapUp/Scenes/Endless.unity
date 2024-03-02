@@ -21354,6 +21354,12 @@ PrefabInstance:
       propertyPath: boostingParticle
       value: 
       objectReference: {fileID: 477632916}
+    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
+        type: 3}
+      propertyPath: staminaParticlePrefab
+      value: 
+      objectReference: {fileID: 19862024, guid: dc60bab7b96c5d541ac47074518c44c7,
+        type: 3}
     - target: {fileID: 4998073855145599770, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
       propertyPath: m_Name

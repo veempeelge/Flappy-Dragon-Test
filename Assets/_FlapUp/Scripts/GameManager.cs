@@ -249,11 +249,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            currentObstacle.GetComponent<SawController>().fluctuationRange = Random.Range(minObstacleFluctuationRange, maxObstacleFluctuationRange);
             currentObstacle.GetComponent<SawController>().movingSpeed = Random.Range(minObstacleSpeedFactor, maxObstacleSpeedFactor);
-
+            currentObstacle.GetComponent<SawController>().startDelay = Random.Range(0, 2);
         }
-       
+
         currentObstacle.transform.parent = transform;
 
         //CreateGold();

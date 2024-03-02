@@ -1053,12 +1053,12 @@ PrefabInstance:
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: movingSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: fluctuationRange
-      value: -4
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1938137108515245384, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
@@ -2446,7 +2446,7 @@ PrefabInstance:
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
       propertyPath: movingSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 979750264384944994, guid: 977efb841263aa8408310603222a5e09,
         type: 3}
@@ -11501,6 +11501,8 @@ MonoBehaviour:
   saw: {fileID: 6672759710502727884, guid: 977efb841263aa8408310603222a5e09, type: 3}
   sawRight: {fileID: 6672759710502727884, guid: 9797587046e8b0c4e8f46b640252e08c,
     type: 3}
+  sawUpRight: {fileID: 0}
+  sawUpLeft: {fileID: 0}
   initialObstacle: 3
   space: 7
   obstacleCounter: 4
@@ -17487,7 +17489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11489796, guid: c1f824e0bfad84544b4aae3091c87689, type: 3}
       propertyPath: movingSpeed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11489796, guid: c1f824e0bfad84544b4aae3091c87689, type: 3}
       propertyPath: fluctuationRange
