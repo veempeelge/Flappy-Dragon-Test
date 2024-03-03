@@ -68,6 +68,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] parallax parallax;
 
+    [SerializeField] int lastLevel = 3;
+
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -352,9 +354,18 @@ public class PlayerController : MonoBehaviour
         {
             if (other.tag == "Finish")
             {
-                SceneManager.LoadScene("Lv Finish");
+                
                 CoinScore.LevelFinish();
                 Debug.Log("Lvl finished");
+
+                if (SceneManager.GetActiveScene().name == "Level " + lastLevel)
+                {
+                    SceneManager.LoadScene("Credit");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Lv Finish");
+                }
             }
             if (other.tag == "Gold") //Hit gold
             {

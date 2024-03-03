@@ -712,8 +712,6 @@ MonoBehaviour:
   hasHitGround: 0
   gameManager: {fileID: 0}
   player: {fileID: 502034565}
-  flyObj: {fileID: 0}
-  dieObj: {fileID: 0}
   goldParticlePrefab: {fileID: 19862024, guid: a313b11c12cdb944289aa8f6a52726c5, type: 3}
   staminaParticlePrefab: {fileID: 0}
   hitGroundParticlePrefab: {fileID: 19881106, guid: 973ca0c97462c75429023027dcc7eaf3,
@@ -731,6 +729,7 @@ MonoBehaviour:
   staminaBar: {fileID: 0}
   CoinScore: {fileID: 0}
   parallax: {fileID: 0}
+  lastLevel: 3
 --- !u!54 &145060897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2912,7 +2911,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 2
+  m_Text: Level 3
 --- !u!222 &413214451
 CanvasRenderer:
   m_ObjectHideFlags: 0
