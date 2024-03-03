@@ -5,7 +5,7 @@ public class CameraController : MonoBehaviour
 {
     public PlayerController playerController;
     public GameObject theGround;
-    public float followUpSpeedFactor = 1;
+    public float followUpSpeedFactor;
 
     [HideInInspector]
     public bool isStopMoving = false;
@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
     private Transform playerTransform;
     private float speedGoUp;
     private float speedGoDown;
-    private float followDownspeedFactor = 2;
+    private float followDownspeedFactor = 8;
     private float initialPlayerDistance;
     private float currentShakeDuration;
     private Vector3 originalShakePos;

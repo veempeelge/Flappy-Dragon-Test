@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 9523248}
   - component: {fileID: 5462238}
   - component: {fileID: 11403384}
-  - component: {fileID: 4591955516292292338}
   m_Layer: 0
   m_Name: Stamina
   m_TagString: Stamina
@@ -150,24 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fluctuationRange: 0
   movingSpeed: 0
---- !u!114 &4591955516292292338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 1, g: 0.4764151, b: 0.77977246, a: 1}
-  outlineWidth: 4.1
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1001 &8501407789957568072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,6 +250,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8200926427169746462}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc2b5fec86972448dbfb544bc3d417b8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8509259986402915629}
   m_SourcePrefab: {fileID: 100100000, guid: fc2b5fec86972448dbfb544bc3d417b8, type: 3}
 --- !u!4 &8246557294483321251 stripped
 Transform:
@@ -305,3 +290,21 @@ CapsuleCollider:
   m_Height: 0.032297406
   m_Direction: 1
   m_Center: {x: 0.0008508175, y: -0.00043802994, z: -0.00014246618}
+--- !u!114 &8509259986402915629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735426945621551897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.78131306, g: 1, b: 0, a: 1}
+  outlineWidth: 6.86
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

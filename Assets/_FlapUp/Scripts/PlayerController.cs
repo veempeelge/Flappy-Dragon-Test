@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     [Header("Gameplay Preferences")]
     public GameManager gameManager;
     public GameObject player;
-    public GameObject flyObj, dieObj;
+   // public GameObject flyObj, dieObj;
     public ParticleSystem goldParticlePrefab;
     public ParticleSystem staminaParticlePrefab;
     public ParticleSystem hitGroundParticlePrefab;
@@ -341,8 +341,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayerDied();
         }
-        flyObj.SetActive(false);
-        dieObj.SetActive(true) ;
+        anim.SetTrigger("Die");
     }
 
 
