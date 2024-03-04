@@ -4885,6 +4885,7 @@ MonoBehaviour:
   powerUpPrefabs:
   - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
   - {fileID: 170474, guid: 0dc0a9bc170c51443930bb65d53afe72, type: 3}
+  - {fileID: 170474, guid: 5cc8038de323bfc42a1fef0ae1b520d1, type: 3}
   normalObstacle: {fileID: 197576, guid: b8ffdf4c185cac94188fe4507bb0c881, type: 3}
   fireObstacle: {fileID: 157988, guid: ff9b7849551b24a4e82b54c289e4d468, type: 3}
   fireParticle: {fileID: 19806546, guid: 0cabf561d2787fd41a927f4fbfd43ee7, type: 3}
@@ -13178,6 +13179,17 @@ PrefabInstance:
       propertyPath: parallaxScaleFloat
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4575771425321007952, guid: f8e4600367e7c4d4ab657614a4904a5f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3b63c24ccbd91524ca2777e6453406b1,
+        type: 3}
+    - target: {fileID: 4575771425321007952, guid: f8e4600367e7c4d4ab657614a4904a5f,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6443424589086354190, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
       propertyPath: m_IsActive
@@ -16576,7 +16588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &2103368144
 ParticleSystemRenderer:
   serializedVersion: 6
