@@ -20,6 +20,8 @@ public class SeasonBackgroundController : MonoBehaviour
     Material currentMaterial;
 
     [SerializeField] GameObject[] parallaxImages;
+    [SerializeField] GameObject[] parallaxFloatImages;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,7 @@ public class SeasonBackgroundController : MonoBehaviour
 
         particleSystems[index].Play();
         parallaxImages[index].SetActive(true);
+        parallaxFloatImages[index].SetActive(true);
     }
 
     // Update is called once per frame

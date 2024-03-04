@@ -65,9 +65,7 @@ public class GameManager : MonoBehaviour
     public GameObject iceParticle;
     public GameObject electricObstacle;
     public ParticleSystem electricParticle;
-    public GameObject saw;
-    public GameObject sawRight;
-    public GameObject sawUpRight, sawUpLeft;
+    public GameObject[] saws;
     
 
     [Header("Gameplay Config")]
@@ -387,21 +385,9 @@ public class GameManager : MonoBehaviour
         {
             obstaclePrefab = electricObstacle;
         }
-        else if (index == 4)
-        {
-            obstaclePrefab = sawRight;
-        }
-        else if (index == 5)
-        {
-            obstaclePrefab = sawUpRight;
-        }
-        else if(index == 6)
-        {
-            obstaclePrefab = sawUpLeft;
-        }
         else
         {
-            obstaclePrefab = saw;
+            obstaclePrefab = saws[Random.Range(0,saws.Length)];
         }
     }
 }

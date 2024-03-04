@@ -175,11 +175,6 @@ public class PlayerController : MonoBehaviour
                 //}
             }
 
-            if (stamina <= 0)
-            {
-                Debug.Log("No Stamina");
-            }
-
 
             
 
@@ -354,7 +349,15 @@ public class PlayerController : MonoBehaviour
         {
             if (other.tag == "Finish")
             {
-                
+                if (SceneManager.GetActiveScene().name == "Level 1")
+                {
+                    PlayerPrefs.SetInt("Level 2", 1);
+                }
+                else if (SceneManager.GetActiveScene().name == "Level 2")
+                {
+                    PlayerPrefs.SetInt("Level 3", 1);
+                }
+
                 CoinScore.LevelFinish();
                 Debug.Log("Lvl finished");
 
@@ -390,7 +393,6 @@ public class PlayerController : MonoBehaviour
             }
             else if (other.tag == "Stamina")
             {
-                Debug.Log("Stamina Up");
                 Destroy(other.gameObject);
                 stamina = maxStamina;
                 CreateParticle(staminaParticlePrefab, other.transform.position);
@@ -569,7 +571,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator WaitToDisableKinematic()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return 
+        new WaitForSeconds(0.5f);
         rigid.isKinematic = false;
     }
 

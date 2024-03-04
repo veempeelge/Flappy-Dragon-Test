@@ -19,6 +19,16 @@ public class SelectLevel : MonoBehaviour
         lv3.onClick.AddListener(GoLv3);
         back.onClick.AddListener(Back);
 
+        if (PlayerPrefs.GetInt("Level 2") == 1)
+        {
+            lv2.interactable = true;
+        }
+        if (PlayerPrefs.GetInt("Level 3") == 1)
+        {
+            lv3.interactable = true;
+        }
+
+
     }
 
     private void GoLv1()
