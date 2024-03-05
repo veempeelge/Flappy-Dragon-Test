@@ -4906,7 +4906,7 @@ MonoBehaviour:
   - {fileID: 2487855942234472747, guid: cf082cf1687807a458401a4574c6db65, type: 3}
   initialObstacle: 3
   space: 7
-  obstacleCounter: 2
+  obstacleCounter: 5
   maxObstacleFluctuationRange: 5
   minObstacleFluctuationRange: 3
   scoreToUpdateValue: 10
