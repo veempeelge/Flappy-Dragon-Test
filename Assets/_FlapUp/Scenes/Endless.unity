@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!198 &43259846 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7213445370736983428, guid: 124901244c4157a4da47beffb89824be,
+    type: 3}
+  m_PrefabInstance: {fileID: 2373853082413234496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &103530593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,7 +4906,7 @@ MonoBehaviour:
   - {fileID: 2487855942234472747, guid: cf082cf1687807a458401a4574c6db65, type: 3}
   initialObstacle: 3
   space: 7
-  obstacleCounter: 3
+  obstacleCounter: 2
   maxObstacleFluctuationRange: 5
   minObstacleFluctuationRange: 3
   scoreToUpdateValue: 10
@@ -13188,6 +13194,11 @@ PrefabInstance:
     - target: {fileID: 4575771425321007952, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590239840131101561, guid: f8e4600367e7c4d4ab657614a4904a5f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6443424589086354190, guid: f8e4600367e7c4d4ab657614a4904a5f,
@@ -21795,6 +21806,11 @@ PrefabInstance:
       propertyPath: tutorialRight
       value: 
       objectReference: {fileID: 1407463381}
+    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
+        type: 3}
+      propertyPath: boostingParticle
+      value: 
+      objectReference: {fileID: 43259846}
     - target: {fileID: 4998073855145599770, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
       propertyPath: m_Name

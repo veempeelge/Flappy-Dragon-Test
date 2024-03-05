@@ -272,7 +272,7 @@ public class GameManager : MonoBehaviour
         while (GameState != GameState.GameOver)
         {
             //Player jump over an obstacle -> add score, create next obstacle
-            if (parentPlayer.transform.position.y > listObstacle[listIndex].transform.position.y)
+            if (parentPlayer.transform.position.y >= listObstacle[listIndex].transform.position.y)
             {
                 ScoreManager.Instance.AddScore(1);
                 hasCheckedScore = false;
