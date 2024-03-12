@@ -572,7 +572,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitToDisableKinematic()
     {
         yield return 
-        new WaitForSeconds(0.5f);
+      //  new WaitForSeconds(0.5f);
         rigid.isKinematic = false;
     }
 
