@@ -96,8 +96,10 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        maxStamina = stamina;
+        stamina = PlayerPrefs.GetFloat("Stamina");
+        maxStamina = PlayerPrefs.GetFloat("Stamina");
         cameraController = Camera.main.GetComponent<CameraController>();
+        Debug.Log(maxStamina);
 
         // Change the character to the selected one
         GameObject currentCharacter = CharacterManager.Instance.characters[CharacterManager.Instance.CurrentCharacterIndex];
@@ -155,7 +157,7 @@ public class PlayerController : MonoBehaviour
                 Flap();
                 rigid.useGravity = false;
                 
-                stamina -= .2f;
+                stamina -= .1f;
                 cooldown = 0f;
 
                 if (rigid.velocity.y < 0)
