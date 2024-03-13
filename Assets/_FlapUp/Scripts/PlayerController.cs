@@ -161,7 +161,6 @@ public class PlayerController : MonoBehaviour
                 if (rigid.velocity.y < 0)
                 {
                     rigid.velocity = new Vector3(0, 0, 0);
-
                 }
                 //if (clickCount == 0)
                 //{
