@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] int lastLevel = 3;
 
+    float extraLives;
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -96,8 +97,18 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        stamina = PlayerPrefs.GetFloat("Stamina");
-        maxStamina = PlayerPrefs.GetFloat("Stamina");
+
+        if (gameManager.endless == true)
+        {
+            stamina = PlayerPrefs.GetFloat("Stamina") + 1f;
+            maxStamina = PlayerPrefs.GetFloat("Stamina") + 1f;
+        }
+        else
+        {
+            stamina = 2f;
+            maxStamina = 2f;
+        }
+       
         cameraController = Camera.main.GetComponent<CameraController>();
         Debug.Log(maxStamina);
 
@@ -164,38 +175,13 @@ public class PlayerController : MonoBehaviour
                 {
                     rigid.velocity = new Vector3(0, 0, 0);
                 }
-                //if (clickCount == 0)
-                //{
-                //    flip = true;
-                //    clickCount++;
-                //}
-                //else
-                //{
-                //    flip = false;
-                //    clickCount--;
-                //}
+              
             }
 
 
             
 
-            //if (Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2)
-            //{
-            //    MoveLeft();
-            //    //        if (flip)
-            //    //        {
-            //    //            MoveLeft();
-            //    //        }
-            //    //        else if (!flip)
-            //    //        {
-            //    //            MoveRight();
-            //    //        }
-            //}
 
-            //if (Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2)
-            //{
-            //    MoveRight();
-            //}
             rigid.useGravity = true;
 
 
@@ -203,12 +189,7 @@ public class PlayerController : MonoBehaviour
 
       
 
-       // if ((Input.GetKey(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) && GameManager.Instance.GameState == GameState.Playing)
-        {
-           // Flap();
-          //  Debug.Log("Should be flapping");
-        }
-
+       
 
         if ((Input.GetKey(KeyCode.D) || Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2) && GameManager.Instance.GameState == GameState.Playing)
         {
@@ -573,7 +554,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator WaitToDisableKinematic()
     {
         yield return 
-      //  new WaitForSeconds(0.5f);
+       new WaitForSeconds(0.5f);
         rigid.isKinematic = false;
     }
 
