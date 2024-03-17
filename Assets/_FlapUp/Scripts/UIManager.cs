@@ -34,11 +34,11 @@ public class UIManager : MonoBehaviour
 
     [Header("Premium Features Buttons")]
     public GameObject watchRewardedAdBtn;
-    public GameObject leaderboardBtn;
-    public GameObject achievementBtn;
+   // public GameObject leaderboardBtn;
+   // public GameObject achievementBtn;
     public GameObject iapPurchaseBtn;
-    public GameObject removeAdsBtn;
-    public GameObject restorePurchaseBtn;
+   // public GameObject removeAdsBtn;
+   // public GameObject restorePurchaseBtn;
 
     [Header("In-App Purchase Store")]
     public GameObject storeUI;
@@ -137,11 +137,11 @@ public class UIManager : MonoBehaviour
 
         // Enable or disable premium stuff
         bool enablePremium = IsPremiumFeaturesEnabled();
-        leaderboardBtn.SetActive(enablePremium);
-        achievementBtn.SetActive(enablePremium);
+       // leaderboardBtn.SetActive(enablePremium);
+       // achievementBtn.SetActive(enablePremium);
         iapPurchaseBtn.SetActive(enablePremium);
-        removeAdsBtn.SetActive(enablePremium);
-        restorePurchaseBtn.SetActive(enablePremium);
+  //      removeAdsBtn.SetActive(enablePremium);
+//        restorePurchaseBtn.SetActive(enablePremium);
 
         // Hidden by default
         storeUI.SetActive(false);

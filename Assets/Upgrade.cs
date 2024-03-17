@@ -15,8 +15,8 @@ public class Upgrade : MonoBehaviour
     float currentStamina;
     float upgradedStamina;
 
-    float currentHP;
-    float upgradedHP;
+    int currentHP;
+    int upgradedHP;
 
     [SerializeField] Text lives;
 
@@ -24,7 +24,7 @@ public class Upgrade : MonoBehaviour
     void Start()
     {
         currentStamina = PlayerPrefs.GetFloat("Stamina", 1f);
-        currentHP = PlayerPrefs.GetFloat("Lives", 0);
+        currentHP = PlayerPrefs.GetInt("Lives");
 
         staminaUpgrade.onClick.AddListener(UpgradeStamina);
         HPButton.onClick.AddListener(UpgradeHP);
@@ -48,12 +48,12 @@ public class Upgrade : MonoBehaviour
     {
         if (CoinManager.Instance.Coins >= 500)
         {
-            upgradedHP = currentHP + 1f;
-            PlayerPrefs.SetFloat("Lives", upgradedHP);
+            upgradedHP = currentHP + 1;
+            PlayerPrefs.SetInt("Lives", upgradedHP);
             CoinManager.Instance.RemoveCoins(500);
             Debug.Log("HP = " + upgradedHP);
 
-            currentHP = PlayerPrefs.GetFloat("Lives");
+            currentHP = PlayerPrefs.GetInt("Lives");
         }
            
     }

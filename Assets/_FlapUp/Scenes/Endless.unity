@@ -575,6 +575,7 @@ MonoBehaviour:
   CoinScore: {fileID: 0}
   parallax: {fileID: 0}
   lastLevel: 3
+  lives: {fileID: 0}
 --- !u!54 &145060897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4819,7 +4820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &781245629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5608,7 +5609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &865626198
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5624,10 +5625,10 @@ RectTransform:
   - {fileID: 915524853}
   m_Father: {fileID: 2090829040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 319.5, y: -60}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865626199
 MonoBehaviour:
@@ -14883,7 +14884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1681434236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17000,11 +17001,7 @@ MonoBehaviour:
   backToMainMenu: {fileID: 804863906}
   tutorialObject: {fileID: 1407463380}
   watchRewardedAdBtn: {fileID: 896615714}
-  leaderboardBtn: {fileID: 2100635586}
-  achievementBtn: {fileID: 865626197}
   iapPurchaseBtn: {fileID: 2072038640}
-  removeAdsBtn: {fileID: 781245628}
-  restorePurchaseBtn: {fileID: 1681434235}
   storeUI: {fileID: 129442574}
   shareUI: {fileID: 103530593}
   shareUIController: {fileID: 1559318249}
@@ -17215,7 +17212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2072038641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17231,10 +17228,10 @@ RectTransform:
   - {fileID: 1770389594}
   m_Father: {fileID: 2090829040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 374.5, y: -60}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072038643
 MonoBehaviour:
@@ -17603,7 +17600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2100635587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17619,10 +17616,10 @@ RectTransform:
   - {fileID: 1042613552}
   m_Father: {fileID: 2090829040}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 264.5, y: -60}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100635589
 MonoBehaviour:
@@ -23084,6 +23081,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
+        type: 3}
+      propertyPath: lives
+      value: 
+      objectReference: {fileID: 567637755}
     - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
       propertyPath: player

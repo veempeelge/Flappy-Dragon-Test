@@ -70,7 +70,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] int lastLevel = 3;
 
-    float extraLives;
+    [SerializeField] Text lives;
+
+    int extraLives;
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -100,13 +102,15 @@ public class PlayerController : MonoBehaviour
 
         if (gameManager.endless == true)
         {
-            stamina = PlayerPrefs.GetFloat("Stamina") + 1f;
-            maxStamina = PlayerPrefs.GetFloat("Stamina") + 1f;
+            stamina = PlayerPrefs.GetFloat("Stamina") + .3f;
+            maxStamina = PlayerPrefs.GetFloat("Stamina") + .3f;
+            extraLives = PlayerPrefs.GetInt("Lives");
         }
         else
         {
             stamina = 2f;
             maxStamina = 2f;
+            extraLives = 0;
         }
        
         cameraController = Camera.main.GetComponent<CameraController>();
@@ -159,52 +163,50 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
-       if ((Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0)) && GameManager.Instance.GameState == GameState.Playing)
+        if(rigid.isKinematic == false)
         {
-
-            //Flap();
-            if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0)) && stamina > 0f)
+            if ((Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0)) && GameManager.Instance.GameState == GameState.Playing)
             {
-                Flap();
-                rigid.useGravity = false;
-                
-                stamina -= .1f;
-                cooldown = 0f;
 
-                if (rigid.velocity.y < 0)
+                //Flap();
+                if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetMouseButtonDown(0)) && stamina > 0f)
                 {
-                    rigid.velocity = new Vector3(0, 0, 0);
+                    Flap();
+                    rigid.useGravity = false;
+
+                    stamina -= .1f;
+                    cooldown = 0f;
+
+                    if (rigid.velocity.y < 0)
+                    {
+                        rigid.velocity = new Vector3(0, 0, 0);
+                    }
                 }
-              
+                rigid.useGravity = true;
             }
 
 
-            
 
 
-            rigid.useGravity = true;
+
+            if ((Input.GetKey(KeyCode.D) || Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2) && GameManager.Instance.GameState == GameState.Playing)
+            {
+                MoveRight();
+                tutorialLeft.SetActive(false);
+            }
+            if ((Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2) && GameManager.Instance.GameState == GameState.Playing)
+            {
+                MoveLeft();
+                tutorialRight.SetActive(false);
+            }
 
 
+            // Fix position
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
 
-      
 
        
-
-        if ((Input.GetKey(KeyCode.D) || Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2) && GameManager.Instance.GameState == GameState.Playing)
-        {
-            MoveRight();
-            tutorialLeft.SetActive(false);
-        }
-        if ((Input.GetKey(KeyCode.A) || Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2 ) && GameManager.Instance.GameState == GameState.Playing)
-        {
-            MoveLeft();
-            tutorialRight.SetActive(false);
-        }
-
-
-        // Fix position
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     private void FixedUpdate()
@@ -271,16 +273,21 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MoveSideForPlayerRight()
     {
-        yield return new WaitForFixedUpdate();
-        rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
-       
+        if (rigid.isKinematic == false)
+        {
+            yield return new WaitForFixedUpdate();
+            rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
+        }
+
     }
 
     IEnumerator MoveSideForPlayerLeft()
     {
-        yield return new WaitForFixedUpdate();
-        rigid.velocity = new Vector3(-sideForce, rigid.velocity.y, 0);
- 
+        if (rigid.isKinematic == false)
+        {
+            yield return new WaitForFixedUpdate();
+            rigid.velocity = new Vector3(-sideForce, rigid.velocity.y, 0);
+        }
     }
     IEnumerator AddVelocityForPlayer()
     {
@@ -384,95 +391,128 @@ public class PlayerController : MonoBehaviour
             {
                 // Hit obstacles
                 if (!hitObstacle)
+                {
                     cameraController.ShakeCamera();
-            }
-
-         
-
-            if (other.tag == "NormalObstacle") //hit obstacle
-            {
-                if (!hitObstacle)
-                {
                     hitObstacle = true;
+                    if (extraLives > 0)
+                    {
+                        Invoke(nameof(Immune), 0.5f);
+                        extraLives -= 1;
+                        lives.text = "Extra Lives " + extraLives;
+                    }
+                    else
+                    {
+                        hitObstacle = true;
 
-                    Die();
-                    //rigid.velocity = new Vector3(0, 0, 0);
-                    transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+                        Die();
+                        //rigid.velocity = new Vector3(0, 0, 0);
+                        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
-                    //Create particle base on obstacle
-                    rigid.isKinematic = true;
-                    StartCoroutine(WaitToDisableKinematic());
-
-                    SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+                        //Create particle base on obstacle
+                        rigid.isKinematic = true;
+                        StartCoroutine(WaitToDisableKinematic());
+                    }
                 }
-
+                   
             }
-            else if (other.tag == "FireObstacle")
+
+
+            if (extraLives < 1)
             {
-                if (!hitObstacle)
+                if (other.tag == "NormalObstacle") //hit obstacle
                 {
-                    hitObstacle = true;
+                    if (!hitObstacle)
+                    {
+                        hitObstacle = true;
 
-                    Die();
-                    //rigid.velocity = new Vector3(0, 0, 0);
-                    transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+                        Die();
+                        //rigid.velocity = new Vector3(0, 0, 0);
+                        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
-                    //Create particle base on obstacle
-                    rigid.isKinematic = true;
-                    CreateParticle(gameManager.fireParticle, transform.position);
-                    player.transform.Find("Main").GetComponent<Renderer>().material.SetColor("_Color", gray);
-                    player.transform.Find("LeftWing").GetComponent<Renderer>().material.SetColor("_Color", gray);
-                    player.transform.Find("RightWing").GetComponent<Renderer>().material.SetColor("_Color", gray);
-                    StartCoroutine(WaitToDisableKinematic());
+                        //Create particle base on obstacle
+                        rigid.isKinematic = true;
+                        StartCoroutine(WaitToDisableKinematic());
 
-                    SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+                    }
+
+                }
+                else if (other.tag == "FireObstacle")
+                {
+                    if (!hitObstacle)
+                    {
+                        hitObstacle = true;
+
+                        Die();
+                        //rigid.velocity = new Vector3(0, 0, 0);
+                        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
+                        //Create particle base on obstacle
+                        rigid.isKinematic = true;
+                        CreateParticle(gameManager.fireParticle, transform.position);
+                        player.transform.Find("Main").GetComponent<Renderer>().material.SetColor("_Color", gray);
+                        player.transform.Find("LeftWing").GetComponent<Renderer>().material.SetColor("_Color", gray);
+                        player.transform.Find("RightWing").GetComponent<Renderer>().material.SetColor("_Color", gray);
+                        StartCoroutine(WaitToDisableKinematic());
+
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+                    }
+                }
+                else if (other.tag == "IceObstacle")
+                {
+                    if (!hitObstacle)
+                    {
+                        hitObstacle = true;
+
+                        Die();
+                        //rigid.velocity = new Vector3(0, 0, 0);
+                        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
+                        //Create particle base on obstacle
+                        rigid.isKinematic = true;
+                        GameObject icePrefab = Instantiate(gameManager.iceParticle, player.transform.position, Quaternion.identity) as GameObject;
+                        icePrefab.transform.parent = player.transform;
+                        icePrefab.transform.localPosition += new Vector3(-0.05f, 0, -0.2f);
+                        icePrefab.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                        StartCoroutine(WaitToDisableKinematic());
+
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+                    }
+                }
+                else if (other.tag == "ElectricObstacle")
+                {
+                    if (!hitObstacle)
+                    {
+                        hitObstacle = true;
+
+                        Die();
+                        // rigid.velocity = new Vector3(0, 0, 0);  //stop player
+                        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
+                        //Create particle base on obstacle
+                        rigid.isKinematic = true;
+                        CreateParticle(gameManager.electricParticle, transform.position, true);
+                        StartCoroutine(WaitToDisableKinematic());
+
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+                    }
+                }
+                else
+                {
+                    return;
                 }
             }
-            else if (other.tag == "IceObstacle")
-            {
-                if (!hitObstacle)
-                {
-                    hitObstacle = true;
-
-                    Die();
-                    //rigid.velocity = new Vector3(0, 0, 0);
-                    transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-
-                    //Create particle base on obstacle
-                    rigid.isKinematic = true;
-                    GameObject icePrefab = Instantiate(gameManager.iceParticle, player.transform.position, Quaternion.identity) as GameObject;
-                    icePrefab.transform.parent = player.transform;
-                    icePrefab.transform.localPosition += new Vector3(-0.05f, 0, -0.2f);
-                    icePrefab.transform.localRotation = Quaternion.Euler(0, 0, 0);
-                    StartCoroutine(WaitToDisableKinematic());
-
-                    SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
-                }
-            }
-            else if (other.tag == "ElectricObstacle")
-            {
-                if (!hitObstacle)
-                {
-                    hitObstacle = true;
-
-                    Die();
-                    // rigid.velocity = new Vector3(0, 0, 0);  //stop player
-                    transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-
-                    //Create particle base on obstacle
-                    rigid.isKinematic = true;
-                    CreateParticle(gameManager.electricParticle, transform.position, true);
-                    StartCoroutine(WaitToDisableKinematic());
-
-                    SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
-                }
-            }
+            else return;
+            
         }
-        else
-        {
-            return;
-        }
+        
     }
+
+    void Immune()
+    {
+        hitObstacle = false;
+    }
+
 
     void OnCollisionEnter(Collision col)
     {
