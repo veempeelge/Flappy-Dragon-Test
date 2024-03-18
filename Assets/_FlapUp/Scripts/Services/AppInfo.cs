@@ -43,11 +43,11 @@ public class AppInfo : MonoBehaviour
 
     public string SUPPORT_EMAIL = "[YOUR_SUPPORT_EMAIL]";
 
-    [HideInInspector]
-    public string FACEBOOK_LINK = "https://facebook.com/";
 
-    [HideInInspector]
-    public string TWITTER_LINK = "https://twitter.com/";
+    public string FACEBOOK_LINK = "https://instagram.com/";
+
+
+    public string TWITTER_LINK = "https://instagram.com/";
 
     void Awake()
     {

@@ -66,6 +66,7 @@ namespace SgLib
         public static void OpenTwitterPage()
         {
             Application.OpenURL(AppInfo.Instance.TWITTER_LINK);
+            Debug.Log("Link : " + AppInfo.Instance.TWITTER_LINK);
         }
 
         public static void ContactUs()

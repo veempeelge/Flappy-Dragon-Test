@@ -5291,7 +5291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &697746050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18379,7 +18379,7 @@ MonoBehaviour:
     m_PressedTrigger: 
     m_SelectedTrigger: 
     m_DisabledTrigger: 
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1962539144}
   m_OnClick:
     m_PersistentCalls:

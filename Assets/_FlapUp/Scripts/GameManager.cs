@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     [Header("Gameplay Config")]
     public int initialObstacle;
     //How many obstacle you create when the game start
-    public int space;
+    public float space;
     //Space between 2 obstacle
 
     /*when the score higher than this value, 
@@ -259,6 +259,7 @@ public class GameManager : MonoBehaviour
         listObstacle.Add(currentObstacle);
 
         obstaclePosition = currentObstacle.transform.position + addedPosition;
+        obstaclePosition.x = randomizeX;
 
     }
 
@@ -278,6 +279,12 @@ public class GameManager : MonoBehaviour
                 hasCheckedScore = false;
                 CreateObstacle();
                 listIndex++;
+
+                if (ScoreManager.Instance.Score/5 == 1 && space > 3)
+                {
+                    space -= .2f;
+                    addedPosition = new Vector3(randomizeX, space, 0);
+                }
             }
 
             //Destroy obstacle and move the ground up

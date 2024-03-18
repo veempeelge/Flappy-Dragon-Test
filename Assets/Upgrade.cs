@@ -22,7 +22,7 @@ public class Upgrade : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+     {
         currentStamina = PlayerPrefs.GetFloat("Stamina", 1f);
         currentHP = PlayerPrefs.GetInt("Lives");
 

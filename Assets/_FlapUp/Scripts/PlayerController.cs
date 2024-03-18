@@ -71,8 +71,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int lastLevel = 3;
 
     [SerializeField] Text lives;
-
+    [SerializeField] Material dragonMats;
     int extraLives;
+    public ParticleSystem boostEndParticle;
+
+    [SerializeField] Texture IframeSprite, IframeEnd;
+
+    [SerializeField] GameObject model;
+
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -102,8 +108,8 @@ public class PlayerController : MonoBehaviour
 
         if (gameManager.endless == true)
         {
-            stamina = PlayerPrefs.GetFloat("Stamina") + .3f;
-            maxStamina = PlayerPrefs.GetFloat("Stamina") + .3f;
+            stamina = PlayerPrefs.GetFloat("Stamina") + .5f;
+            maxStamina = PlayerPrefs.GetFloat("Stamina") + .5f;
             extraLives = PlayerPrefs.GetInt("Lives");
         }
         else
@@ -114,7 +120,7 @@ public class PlayerController : MonoBehaviour
         }
        
         cameraController = Camera.main.GetComponent<CameraController>();
-        Debug.Log(maxStamina);
+        Debug.Log(maxStamina); 
 
         // Change the character to the selected one
         GameObject currentCharacter = CharacterManager.Instance.characters[CharacterManager.Instance.CurrentCharacterIndex];
@@ -218,15 +224,17 @@ public class PlayerController : MonoBehaviour
 
         if (cooldown > regenCooldown && stamina < maxStamina)
         {
-            stamina += .1f;
+            stamina += .03f;
         }
 
         if (boostTimer >= 3f && !canCollide)
         {
-            canCollide = true;
-            jumpForce -= 500;
-            boostingParticle.Stop();
+            jumpForce = 200;
             stamina = maxStamina;
+            boostingParticle.Stop();
+          // anim.SetTrigger("Iframe");
+            StartCoroutine("Iframe");
+            Invoke("StopBoost",1);
         }
 
         if (rigid.position.x > 4.538022f)
@@ -243,7 +251,25 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+    IEnumerator Iframe()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+         //   dragonMats.color = new Color(.5f, .5f, .5f, 1);
+           //dragonMats.SetTexture("_MainTex", IframeEnd);
+            model.GetComponent<Outline>().enabled = true;
+            yield return new WaitForSeconds(.1f);
+         //   dragonMats.color = new Color(1, 1, 1, 1);
+            model.GetComponent<Outline>().enabled = false;
+         //   dragonMats.SetTexture("_MainTex", IframeSprite);
+            yield return new WaitForSeconds(.1f);
+        }
+        
+    }
+    private void StopBoost()
+    {
+        canCollide = true;
+    }
     void StopMove()
     {
         rigid.velocity = new Vector3(0, rigid.velocity.y, 0);
@@ -371,10 +397,9 @@ public class PlayerController : MonoBehaviour
             }
             else if (other.tag == "Boost")
             {
-
                 CreateParticle(boostParticlePrefab, other.transform.position);
                 Destroy(other.gameObject);
-                Debug.Log("Boost");
+               //Debug.Log("Boost");
                 jumpForce += 500;
                 boostTimer = 0;
                 canCollide = false;
@@ -399,6 +424,8 @@ public class PlayerController : MonoBehaviour
                         Invoke(nameof(Immune), 0.5f);
                         extraLives -= 1;
                         lives.text = "Extra Lives " + extraLives;
+                        anim.SetTrigger("Iframe");
+                        StartCoroutine("Iframe");
                     }
                     else
                     {
