@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 #if EASY_MOBILE
-using EasyMobile;
+//using EasyMobile;
 #endif
 
 public class PremiumFeaturesManager : MonoBehaviour
