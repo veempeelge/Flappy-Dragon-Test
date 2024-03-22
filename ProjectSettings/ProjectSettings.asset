@@ -161,7 +161,7 @@ PlayerSettings:
     Android: com.LaSalleStudent.SuperDragone
     Standalone: unity.DefaultCompany.Flap Up! (Dash Up)
     Tizen: com.sglib.demogame
-    iPhone: com.La-Salle-Student.Super-Dragone
+    iPhone: com.sglib.demogame
     tvOS: com.sglib.demogame
   buildNumber:
     Standalone: 0
@@ -831,7 +831,7 @@ PlayerSettings:
     WebGL: EASY_MOBILE;EASY_MOBILE_PRO
     Windows Store Apps: EASY_MOBILE;EASY_MOBILE_PRO;MOBILE_INPUT
     XboxOne: EASY_MOBILE;EASY_MOBILE_PRO
-    iPhone: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    iPhone: EASY_MOBILE;EASY_MOBILE_PRO;CROSS_PLATFORM_INPUT;MOBILE_INPUT
     tvOS: EASY_MOBILE;EASY_MOBILE_PRO
   additionalCompilerArguments: {}
   platformArchitecture: {}
