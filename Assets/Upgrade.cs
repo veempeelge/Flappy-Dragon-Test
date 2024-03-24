@@ -28,7 +28,7 @@ public class Upgrade : MonoBehaviour
 
         staminaUpgrade.onClick.AddListener(UpgradeStamina);
         HPButton.onClick.AddListener(UpgradeHP);
-        lives.text = "Extra Lives " + currentHP;
+        lives.text =  currentHP.ToString();
     }
 
     private void UpgradeStamina()
@@ -46,11 +46,11 @@ public class Upgrade : MonoBehaviour
 
     private void UpgradeHP()
     {
-        if (CoinManager.Instance.Coins >= 500)
+        if (CoinManager.Instance.Coins >= 100)
         {
             upgradedHP = currentHP + 1;
             PlayerPrefs.SetInt("Lives", upgradedHP);
-            CoinManager.Instance.RemoveCoins(500);
+            CoinManager.Instance.RemoveCoins(100);
             Debug.Log("HP = " + upgradedHP);
 
             currentHP = PlayerPrefs.GetInt("Lives");

@@ -388,7 +388,7 @@ public class PlayerController : MonoBehaviour
             if (other.tag == "Gold") //Hit gold
             {
                 SoundManager.Instance.PlaySound(SoundManager.Instance.item);
-                CoinManager.Instance.AddCoins(1);
+              //  CoinManager.Instance.AddCoins(1);
                 CreateParticle(goldParticlePrefab, other.transform.position);
                 Destroy(other.gameObject);
 
@@ -398,6 +398,7 @@ public class PlayerController : MonoBehaviour
             else if (other.tag == "Boost")
             {
                 CreateParticle(boostParticlePrefab, other.transform.position);
+                SoundManager.Instance.PlaySound(SoundManager.Instance.item);
                 Destroy(other.gameObject);
                //Debug.Log("Boost");
                 jumpForce += 500;
@@ -414,6 +415,8 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+              // SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+
                 // Hit obstacles
                 if (!hitObstacle)
                 {
@@ -423,9 +426,11 @@ public class PlayerController : MonoBehaviour
                     {
                         Invoke(nameof(Immune), 0.5f);
                         extraLives -= 1;
-                        lives.text = "Extra Lives " + extraLives;
+                        lives.text = extraLives.ToString();
                         anim.SetTrigger("Iframe");
                         StartCoroutine("Iframe");
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+
                     }
                     else
                     {
@@ -438,9 +443,10 @@ public class PlayerController : MonoBehaviour
                         //Create particle base on obstacle
                         rigid.isKinematic = true;
                         StartCoroutine(WaitToDisableKinematic());
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+
                     }
                 }
-                   
             }
 
 
@@ -459,8 +465,8 @@ public class PlayerController : MonoBehaviour
                         //Create particle base on obstacle
                         rigid.isKinematic = true;
                         StartCoroutine(WaitToDisableKinematic());
+                       // SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
 
-                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
                     }
 
                 }
@@ -481,8 +487,8 @@ public class PlayerController : MonoBehaviour
                         player.transform.Find("LeftWing").GetComponent<Renderer>().material.SetColor("_Color", gray);
                         player.transform.Find("RightWing").GetComponent<Renderer>().material.SetColor("_Color", gray);
                         StartCoroutine(WaitToDisableKinematic());
+                      //  SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
 
-                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
                     }
                 }
                 else if (other.tag == "IceObstacle")
@@ -502,8 +508,8 @@ public class PlayerController : MonoBehaviour
                         icePrefab.transform.localPosition += new Vector3(-0.05f, 0, -0.2f);
                         icePrefab.transform.localRotation = Quaternion.Euler(0, 0, 0);
                         StartCoroutine(WaitToDisableKinematic());
+                      //  SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
 
-                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
                     }
                 }
                 else if (other.tag == "ElectricObstacle")
@@ -520,8 +526,8 @@ public class PlayerController : MonoBehaviour
                         rigid.isKinematic = true;
                         CreateParticle(gameManager.electricParticle, transform.position, true);
                         StartCoroutine(WaitToDisableKinematic());
+                      //  SoundManager.Instance.PlaySound(SoundManager.Instance.item);
 
-                        SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
                     }
                 }
                 else
@@ -545,8 +551,8 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.Instance.GameState == GameState.GameOver && col.collider.tag.Equals("TheGround") && !hasHitGround)
         {
-            hasHitGround = true;
             SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+            hasHitGround = true;
             CreateParticle(hitGroundParticlePrefab, transform.position + new Vector3(0, -1f, 0));
         }
     }
@@ -620,9 +626,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator WaitToDisableKinematic()
     {
-        yield return 
+       yield return 
        new WaitForSeconds(0.5f);
-        rigid.isKinematic = false;
+       rigid.isKinematic = false;
     }
 
 }

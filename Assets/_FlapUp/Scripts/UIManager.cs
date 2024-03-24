@@ -78,7 +78,13 @@ public class UIManager : MonoBehaviour
     {
         score.text = ScoreManager.Instance.Score.ToString();
         bestScore.text = ScoreManager.Instance.HighScore.ToString();
-        coinText.text = CoinManager.Instance.Coins.ToString();
+        if (coinText != null)
+        {
+            coinText.text = CoinManager.Instance.Coins.ToString();
+        }
+        else return;
+
+
 
         if (!DailyRewardController.Instance.disable && dailyRewardBtn.gameObject.activeSelf)
         {

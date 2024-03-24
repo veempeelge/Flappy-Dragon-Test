@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using SgLib;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CoinScore : MonoBehaviour
 {
     [SerializeField] int coinCount;
+    int alreadyCollected;
     GameObject coinTextObject;
     int collecetedCoins;
     TMP_Text tmp;
+
+    [SerializeField] Text coinCollectedText;
 
     public string tagToCount = "Gold";
     bool LevelFinished;
@@ -23,8 +28,6 @@ public class CoinScore : MonoBehaviour
         coinCount = count;
         DontDestroyOnLoad(this);
         // Find the GameObject with the specified name
-        
-
         if (coinTextObject != null)
         {
             // Get the TextMeshPro component attached to the GameObject
@@ -44,6 +47,10 @@ public class CoinScore : MonoBehaviour
         {
             return;
         }
+
+        Debug.Log(alreadyCollected);
+
+       
     }
 
     // Update is called once per frame
@@ -77,6 +84,18 @@ public class CoinScore : MonoBehaviour
         {
             tmp.SetText(collecetedCoins.ToString() + "/" + coinCount.ToString());
         }
+
+        if (coinCollectedText != null)
+        {
+            coinCollectedText.text = collecetedCoins.ToString();
+        }
+        else
+        {
+            return;
+        }
+
+        alreadyCollected = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "Coins");
+
     }
 
     public void GetCoins()
@@ -92,5 +111,17 @@ public class CoinScore : MonoBehaviour
     public void LevelFinish()
     {
         LevelFinished = true;
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "Coins", collecetedCoins);
+        if (collecetedCoins - alreadyCollected > 0)
+        {
+            CoinManager.Instance.AddCoins(collecetedCoins - alreadyCollected);
+        }
+        else
+        {
+            Debug.Log("No coins collected");
+        }
+      
+
+        Debug.Log("Coin input = " + collecetedCoins + "-" +  alreadyCollected + "=" + (collecetedCoins-alreadyCollected));
     }
 }
