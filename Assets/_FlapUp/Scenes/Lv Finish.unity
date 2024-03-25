@@ -431,7 +431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &175467493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6416,6 +6416,7 @@ GameObject:
   - component: {fileID: 367534355}
   - component: {fileID: 367534357}
   - component: {fileID: 367534356}
+  - component: {fileID: 367534358}
   m_Layer: 5
   m_Name: CoinText
   m_TagString: Untagged
@@ -6439,7 +6440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -70, y: -40}
+  m_AnchoredPosition: {x: -309, y: -63}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &367534356
@@ -6484,6 +6485,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367534354}
   m_CullTransparentMesh: 1
+--- !u!114 &367534358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367534354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e024e8b504aad548897c679434ff4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalCoin: {fileID: 367534356}
 --- !u!1 &385500147
 GameObject:
   m_ObjectHideFlags: 0
@@ -6822,7 +6836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &413214449
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23279,7 +23293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20, y: -40}
+  m_AnchoredPosition: {x: -259.00003, y: -62.999958}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1779671577
@@ -23674,7 +23688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1867857130
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29336,6 +29350,7 @@ MonoBehaviour:
   season: {fileID: 281622634}
   ground: {fileID: 417298828}
   parallaxImages: []
+  parallaxFloatImages: []
 --- !u!1 &2058009159
 GameObject:
   m_ObjectHideFlags: 0
@@ -29400,11 +29415,7 @@ MonoBehaviour:
   backToMainMenu: {fileID: 2041674707}
   tutorialObject: {fileID: 2102007695}
   watchRewardedAdBtn: {fileID: 896615714}
-  leaderboardBtn: {fileID: 2100635586}
-  achievementBtn: {fileID: 865626197}
   iapPurchaseBtn: {fileID: 2072038640}
-  removeAdsBtn: {fileID: 781245628}
-  restorePurchaseBtn: {fileID: 1681434235}
   storeUI: {fileID: 129442574}
   shareUI: {fileID: 103530593}
   shareUIController: {fileID: 1559318249}

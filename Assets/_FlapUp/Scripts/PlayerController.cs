@@ -108,8 +108,8 @@ public class PlayerController : MonoBehaviour
 
         if (gameManager.endless == true)
         {
-            stamina = PlayerPrefs.GetFloat("Stamina") + .5f;
-            maxStamina = PlayerPrefs.GetFloat("Stamina") + .5f;
+            stamina = PlayerPrefs.GetFloat("Stamina") + 1f;
+            maxStamina = PlayerPrefs.GetFloat("Stamina") + 1f;
             extraLives = PlayerPrefs.GetInt("Lives");
         }
         else
@@ -299,7 +299,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MoveSideForPlayerRight()
     {
-        if (rigid.isKinematic == false)
+        if (rigid.isKinematic == false && GameManager.Instance.GameState != GameState.GameOver)
         {
             yield return new WaitForFixedUpdate();
             rigid.velocity = new Vector3(sideForce, rigid.velocity.y, 0);
@@ -309,11 +309,15 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MoveSideForPlayerLeft()
     {
-        if (rigid.isKinematic == false)
-        {
-            yield return new WaitForFixedUpdate();
-            rigid.velocity = new Vector3(-sideForce, rigid.velocity.y, 0);
-        }
+     
+        
+            if (rigid.isKinematic == false && GameManager.Instance.GameState != GameState.GameOver)
+            {
+                yield return new WaitForFixedUpdate();
+                rigid.velocity = new Vector3(-sideForce, rigid.velocity.y, 0);
+            }
+       
+       
     }
     IEnumerator AddVelocityForPlayer()
     {
