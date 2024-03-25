@@ -3,12 +3,13 @@
 --- !u!1 &134004
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
   m_Component:
-  - 4: {fileID: 478904}
-  - 114: {fileID: 11496204}
+  - component: {fileID: 478904}
+  - component: {fileID: 11496204}
   m_Layer: 0
   m_Name: AppInfo
   m_TagString: Untagged
@@ -18,29 +19,32 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &478904
 Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134004}
-  m_LocalRotation: {x: 0.0547964, y: 0.69624805, z: 0.696248, w: -0.16575535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.054795682, y: 0.6962483, z: 0.6962483, w: -0.16575304}
   m_LocalPosition: {x: 99, y: 99, z: 99}
   m_LocalScale: {x: 9999, y: 9999, z: 9999}
-  m_LocalEulerAnglesHint: {x: 999, y: 999, z: 999}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 999, y: 999, z: 999}
 --- !u!114 &11496204
 MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134004}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0880f83037c764ac6b3a06b71bbea97e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  APP_NAME: '[YOUR_APP_NAME]'
+  APP_NAME: Super Dragone
   APPSTORE_ID: '[YOUR_APPSTORE_ID'
   BUNDLE_ID: '[YOUR_BUNDLE_ID]'
   APPSTORE_LINK: itms-apps://itunes.apple.com/app/id
@@ -50,18 +54,7 @@ MonoBehaviour:
   APPSTORE_HOMEPAGE: '[YOUR_APPSTORE_PUBLISHER_LINK]'
   PLAYSTORE_HOMEPAGE: '[YOUR_GOOGLEPLAY_PUBLISHER_NAME]'
   FACEBOOK_ID: '[YOUR_FACEBOOK_PAGE_ID]'
-  TWITTER_NAME: '[YOUR_TWITTER_PAGE_NAME]'
+  TWITTER_NAME: super.dragone
   SUPPORT_EMAIL: '[YOUR_SUPPORT_EMAIL]'
   FACEBOOK_LINK: https://facebook.com/
-  TWITTER_LINK: https://twitter.com/
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 134004}
-  m_IsPrefabParent: 1
+  TWITTER_LINK: https://instagram.com/

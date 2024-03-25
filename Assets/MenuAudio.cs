@@ -8,6 +8,8 @@ public class MenuAudio : MonoBehaviour
     public string nameToCount = "MainSong";
     public List<string> targetSceneNames = new List<string> { "Level 1", "Level 2", "Level 3", "Endless" };
     int count = 0;
+
+    
     // Start is called before the first frame update
     void Start()
     {

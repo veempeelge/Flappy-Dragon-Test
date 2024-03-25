@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
             stamina = PlayerPrefs.GetFloat("Stamina") + 1f;
             maxStamina = PlayerPrefs.GetFloat("Stamina") + 1f;
             extraLives = PlayerPrefs.GetInt("Lives");
+            lives.text = extraLives.ToString();
         }
         else
         {

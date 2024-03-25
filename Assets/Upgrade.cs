@@ -28,7 +28,7 @@ public class Upgrade : MonoBehaviour
 
         staminaUpgrade.onClick.AddListener(UpgradeStamina);
         HPButton.onClick.AddListener(UpgradeHP);
-        lives.text =  currentHP.ToString();
+        lives.text = currentHP.ToString();
     }
 
     private void UpgradeStamina()

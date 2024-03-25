@@ -31,6 +31,9 @@ public class UIManager : MonoBehaviour
     public GameObject musicOffBtn;
     public GameObject backToMainMenu;
     public GameObject tutorialObject;
+    public GameObject staminaObject;
+
+    public Button startBt, charSel, setBut, setbut2 , soundOnBt, soundOffBt, musicOnBt, musicOfBt, backMainMenuBt, backMainMenu2, exitSet, igBt, restartBt;
 
     [Header("Premium Features Buttons")]
     public GameObject watchRewardedAdBtn;
@@ -50,7 +53,45 @@ public class UIManager : MonoBehaviour
     Animator scoreAnimator;
     Animator dailyRewardAnimator;
     bool isWatchAdsForCoinBtnActive;
+    void Start()
+    {
+        scoreAnimator = score.GetComponent<Animator>();
+        dailyRewardAnimator = dailyRewardBtn.GetComponent<Animator>();
 
+        Reset();
+        ShowStartUI();
+
+        startBt.onClick.AddListener(StartGame);
+        charSel.onClick.AddListener(ShowCharacterSelectionScene);
+        setBut.onClick.AddListener(ShowSettingsUI);
+        setbut2 .onClick.AddListener(ShowSettingsUI);   
+        soundOnBt.onClick.AddListener(ToggleSound);
+        soundOffBt.onClick.AddListener(ToggleSound);
+        musicOnBt.onClick.AddListener(ToggleMusic);
+        musicOfBt.onClick.AddListener(ToggleMusic);
+        backMainMenuBt.onClick.AddListener(BackToMainMenu);
+        backMainMenu2.onClick.AddListener(BackToMainMenu);
+        exitSet.onClick.AddListener(HideSettingsUI);
+        igBt.onClick.AddListener(OpenTwitterPage);
+        restartBt.onClick.AddListener(RestartGame);
+
+        startBt.onClick.AddListener(ButtonClickSound);
+        charSel.onClick.AddListener(ButtonClickSound);
+        setBut.onClick.AddListener(ButtonClickSound);
+        setbut2.onClick.AddListener(ButtonClickSound);
+        soundOnBt.onClick.AddListener(ButtonClickSound);
+        soundOffBt.onClick.AddListener(ButtonClickSound);
+        musicOnBt.onClick.AddListener(ButtonClickSound);
+        musicOfBt.onClick.AddListener(ButtonClickSound);
+        backMainMenuBt.onClick.AddListener(ButtonClickSound);
+        backMainMenu2.onClick.AddListener(ButtonClickSound);
+        exitSet.onClick.AddListener(ButtonClickSound);
+        igBt.onClick.AddListener(ButtonClickSound);
+        restartBt.onClick.AddListener(ButtonClickSound);
+
+
+
+    }
     void OnEnable()
     {
         GameManager.GameStateChanged += GameManager_GameStateChanged;
@@ -64,14 +105,7 @@ public class UIManager : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
-    {
-        scoreAnimator = score.GetComponent<Animator>();
-        dailyRewardAnimator = dailyRewardBtn.GetComponent<Animator>();
-
-        Reset();
-        ShowStartUI();
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -202,6 +236,7 @@ public class UIManager : MonoBehaviour
         watchRewardedAdBtn.SetActive(false);
         backToMainMenu.SetActive(false);
         tutorialObject.SetActive(true);
+        staminaObject.SetActive(true);  
     }
 
     public void ShowGameOverUI()

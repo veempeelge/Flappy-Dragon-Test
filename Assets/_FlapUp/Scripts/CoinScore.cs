@@ -48,7 +48,12 @@ public class CoinScore : MonoBehaviour
             return;
         }
 
+
         Debug.Log(alreadyCollected);
+        if (SceneManager.GetActiveScene().name == "Credit")
+        {
+            DestroyObject();
+        }
 
        
     }
@@ -56,6 +61,8 @@ public class CoinScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        alreadyCollected = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "Coins");
+
         if (LevelFinished)
         {
             coinTextObject = GameObject.Find("CoinsCollectedNumber");
@@ -94,7 +101,7 @@ public class CoinScore : MonoBehaviour
             return;
         }
 
-        alreadyCollected = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "Coins");
+        //alreadyCollected = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "Coins");
 
     }
 
@@ -111,7 +118,6 @@ public class CoinScore : MonoBehaviour
     public void LevelFinish()
     {
         LevelFinished = true;
-        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "Coins", collecetedCoins);
         if (collecetedCoins - alreadyCollected > 0)
         {
             CoinManager.Instance.AddCoins(collecetedCoins - alreadyCollected);
@@ -120,7 +126,12 @@ public class CoinScore : MonoBehaviour
         {
             Debug.Log("No coins collected");
         }
-      
+
+        if (collecetedCoins > alreadyCollected)
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "Coins", collecetedCoins);
+        }
+
 
         Debug.Log("Coin input = " + collecetedCoins + "-" +  alreadyCollected + "=" + (collecetedCoins-alreadyCollected));
     }

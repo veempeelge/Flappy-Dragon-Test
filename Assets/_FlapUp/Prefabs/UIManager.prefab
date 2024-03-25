@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3262232605894349139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6711580527609618381}
+  - component: {fileID: 3343090208130571074}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6711580527609618381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3262232605894349139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.8370895, y: 16.841707, z: 0.8491745}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3343090208130571074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3262232605894349139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fadcb3ad8113624cb304b4e6e2ab903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: {fileID: 0}
+  title: {fileID: 0}
+  score: {fileID: 0}
+  bestScore: {fileID: 0}
+  coinText: {fileID: 0}
+  newBestScore: {fileID: 0}
+  tapToStart: {fileID: 0}
+  characterSelectBtn: {fileID: 0}
+  menuButtons: {fileID: 0}
+  dailyRewardBtn: {fileID: 0}
+  dailyRewardBtnText: {fileID: 0}
+  rewardUI: {fileID: 0}
+  settingsUI: {fileID: 0}
+  soundOnBtn: {fileID: 0}
+  soundOffBtn: {fileID: 0}
+  musicOnBtn: {fileID: 0}
+  musicOffBtn: {fileID: 0}
+  backToMainMenu: {fileID: 0}
+  tutorialObject: {fileID: 0}
+  staminaObject: {fileID: 0}
+  watchRewardedAdBtn: {fileID: 0}
+  iapPurchaseBtn: {fileID: 0}
+  storeUI: {fileID: 0}
+  shareUI: {fileID: 0}
+  shareUIController: {fileID: 0}
