@@ -211,7 +211,7 @@ public class UIManager : MonoBehaviour
     public void ShowStartUI()
     {
         settingsUI.SetActive(false);
-
+        staminaObject.SetActive(false);
         header.SetActive(true);
         title.SetActive(true);
         tapToStart.SetActive(true);
