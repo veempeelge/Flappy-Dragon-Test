@@ -9175,7 +9175,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631923134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4.999841}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9183,7 +9183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 25.949661}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &631923136
@@ -9208,16 +9208,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d676eb3b855fa24db84418eca454bf6, type: 2}
-  m_sharedMaterial: {fileID: 5136116197924946134, guid: 5d676eb3b855fa24db84418eca454bf6,
+  m_fontAsset: {fileID: 11400000, guid: 49bb711424798d24d9c8e2162b2228af, type: 2}
+  m_sharedMaterial: {fileID: -3842341970711651327, guid: 49bb711424798d24d9c8e2162b2228af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285923443
-  m_fontColor: {r: 0.4490292, g: 0, b: 0.46226418, a: 1}
+    rgba: 4289527999
+  m_fontColor: {r: 0.7490196, g: 0, b: 0.6784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9234,8 +9234,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21088,7 +21088,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974527697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4.999841}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21096,7 +21096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 25.949661}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974527699
@@ -21121,16 +21121,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d676eb3b855fa24db84418eca454bf6, type: 2}
-  m_sharedMaterial: {fileID: 5136116197924946134, guid: 5d676eb3b855fa24db84418eca454bf6,
+  m_fontAsset: {fileID: 11400000, guid: 49bb711424798d24d9c8e2162b2228af, type: 2}
+  m_sharedMaterial: {fileID: -3842341970711651327, guid: 49bb711424798d24d9c8e2162b2228af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285923443
-  m_fontColor: {r: 0.4490292, g: 0, b: 0.46226418, a: 1}
+    rgba: 4289527999
+  m_fontColor: {r: 0.7490196, g: 0, b: 0.6784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21147,8 +21147,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21434,7 +21434,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050173944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00009390024}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21442,7 +21442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.4499893, y: 2.0501118}
+  m_AnchoredPosition: {x: 2.4499893, y: 28}
   m_SizeDelta: {x: -33.499977, y: -4.0997763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1050173946
@@ -21467,16 +21467,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Endless
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d676eb3b855fa24db84418eca454bf6, type: 2}
-  m_sharedMaterial: {fileID: 5136116197924946134, guid: 5d676eb3b855fa24db84418eca454bf6,
+  m_fontAsset: {fileID: 11400000, guid: 49bb711424798d24d9c8e2162b2228af, type: 2}
+  m_sharedMaterial: {fileID: -3842341970711651327, guid: 49bb711424798d24d9c8e2162b2228af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285923443
-  m_fontColor: {r: 0.4490292, g: 0, b: 0.46226418, a: 1}
+    rgba: 4289527999
+  m_fontColor: {r: 0.7490196, g: 0, b: 0.6784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21493,8 +21493,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24003,10 +24003,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 155538, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24046,14 +24042,6 @@ PrefabInstance:
     - target: {fileID: 453646, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8229856, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: f06376c8d1a22f94fad20244edbe3c1f, type: 3}
-    - target: {fileID: 8229856, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24154,7 +24142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1468960368
 RectTransform:
   m_ObjectHideFlags: 0

@@ -55,42 +55,14 @@ public class CoinScore : MonoBehaviour
             DestroyObject();
         }
 
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         alreadyCollected = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "Coins");
-
-        if (LevelFinished)
-        {
-            coinTextObject = GameObject.Find("CoinsCollectedNumber");
-            if (coinTextObject != null)
-            {
-                // Get the TextMeshPro component attached to the GameObject
-                tmp = coinTextObject.GetComponent<TMP_Text>();
-
-                if (tmp != null)
-                {
-                    // You have access to the TMP component here
-                    // tmp.text = "Your Text";
-                }
-                else
-                {
-                    Debug.LogWarning("TextMeshPro component not found on GameObject: " + tmp.name);
-                }
-            }
-            else
-            {
-                Debug.LogWarning("GameObject with the specified name not found.");
-            }
-        }
        
-        if (SceneManager.GetActiveScene().name == "Lv Finish")
-        {
-            tmp.SetText(collecetedCoins.ToString() + "/" + coinCount.ToString());
-        }
 
         if (coinCollectedText != null)
         {
@@ -121,9 +93,12 @@ public class CoinScore : MonoBehaviour
         if (collecetedCoins - alreadyCollected > 0)
         {
             CoinManager.Instance.AddCoins(collecetedCoins - alreadyCollected);
+             PlayerPrefs.SetInt("coinObtained", collecetedCoins - alreadyCollected);
         }
         else
         {
+            PlayerPrefs.SetInt("coinObtained", 0);
+
             Debug.Log("No coins collected");
         }
 
@@ -132,6 +107,10 @@ public class CoinScore : MonoBehaviour
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "Coins", collecetedCoins);
         }
 
+        PlayerPrefs.SetInt("coinCollectedThisRound", collecetedCoins);
+       // PlayerPrefs.SetInt("coinObtained", collecetedCoins - alreadyCollected);
+        PlayerPrefs.SetInt("AlreadyCollected", alreadyCollected);
+        PlayerPrefs.SetInt("Count", coinCount);
 
         Debug.Log("Coin input = " + collecetedCoins + "-" +  alreadyCollected + "=" + (collecetedCoins-alreadyCollected));
     }

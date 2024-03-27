@@ -41,6 +41,7 @@ public class Upgrade : MonoBehaviour
             Debug.Log("Stamina = "+ upgradedStamina);
 
             currentStamina = PlayerPrefs.GetFloat("Stamina");
+            SoundManager.Instance.PlaySound(SoundManager.Instance.upgrade);
         }
     }
 
@@ -54,8 +55,10 @@ public class Upgrade : MonoBehaviour
             Debug.Log("HP = " + upgradedHP);
 
             currentHP = PlayerPrefs.GetInt("Lives");
+            SoundManager.Instance.PlaySound(SoundManager.Instance.upgrade);
+
         }
-           
+
     }
 
     // Update is called once per frame

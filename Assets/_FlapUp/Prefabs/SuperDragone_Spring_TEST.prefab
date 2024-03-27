@@ -5781,6 +5781,12 @@ MonoBehaviour:
   CoinScore: {fileID: 0}
   parallax: {fileID: 0}
   lastLevel: 3
+  lives: {fileID: 0}
+  dragonMats: {fileID: 0}
+  boostEndParticle: {fileID: 0}
+  IframeSprite: {fileID: 0}
+  IframeEnd: {fileID: 0}
+  model: {fileID: 0}
 --- !u!54 &6335052870295921996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5827,8 +5833,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.5424364, z: 0.5510167}
-  m_Center: {x: -9.5952025e-18, y: 0.7089406, z: 0.0045814514}
+  m_Size: {x: 0.59700346, y: 1.2014393, z: 0.5510167}
+  m_Center: {x: 0.0077499747, y: 0.60044163, z: 0.0045814514}
 --- !u!4 &5627081829001378208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf2b5a454b9011c4daf7697c7868df12,

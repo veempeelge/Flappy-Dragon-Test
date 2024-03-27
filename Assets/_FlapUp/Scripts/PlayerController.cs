@@ -383,7 +383,7 @@ public class PlayerController : MonoBehaviour
 
                 if (SceneManager.GetActiveScene().name == "Level " + lastLevel)
                 {
-                    SceneManager.LoadScene("Credit");
+                    SceneManager.LoadScene("Lv Finish");
                 }
                 else
                 {
@@ -403,7 +403,7 @@ public class PlayerController : MonoBehaviour
             else if (other.tag == "Boost")
             {
                 CreateParticle(boostParticlePrefab, other.transform.position);
-                SoundManager.Instance.PlaySound(SoundManager.Instance.item);
+                SoundManager.Instance.PlaySound(SoundManager.Instance.boost);
                 Destroy(other.gameObject);
                //Debug.Log("Boost");
                 jumpForce += 500;
@@ -434,7 +434,9 @@ public class PlayerController : MonoBehaviour
                         lives.text = extraLives.ToString();
                         anim.SetTrigger("Iframe");
                         StartCoroutine("Iframe");
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hurt);
                         SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
+
 
                     }
                     else
@@ -448,6 +450,7 @@ public class PlayerController : MonoBehaviour
                         //Create particle base on obstacle
                         rigid.isKinematic = true;
                         StartCoroutine(WaitToDisableKinematic());
+                        SoundManager.Instance.PlaySound(SoundManager.Instance.hurt);
                         SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
 
                     }

@@ -9656,8 +9656,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d676eb3b855fa24db84418eca454bf6, type: 2}
-  m_sharedMaterial: {fileID: 5136116197924946134, guid: 5d676eb3b855fa24db84418eca454bf6,
+  m_fontAsset: {fileID: 11400000, guid: 49bb711424798d24d9c8e2162b2228af, type: 2}
+  m_sharedMaterial: {fileID: -3842341970711651327, guid: 49bb711424798d24d9c8e2162b2228af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -19718,8 +19718,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d676eb3b855fa24db84418eca454bf6, type: 2}
-  m_sharedMaterial: {fileID: 5136116197924946134, guid: 5d676eb3b855fa24db84418eca454bf6,
+  m_fontAsset: {fileID: 11400000, guid: 49bb711424798d24d9c8e2162b2228af, type: 2}
+  m_sharedMaterial: {fileID: -3842341970711651327, guid: 49bb711424798d24d9c8e2162b2228af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -26565,8 +26565,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d676eb3b855fa24db84418eca454bf6, type: 2}
-  m_sharedMaterial: {fileID: 5136116197924946134, guid: 5d676eb3b855fa24db84418eca454bf6,
+  m_fontAsset: {fileID: 11400000, guid: 49bb711424798d24d9c8e2162b2228af, type: 2}
+  m_sharedMaterial: {fileID: -3842341970711651327, guid: 49bb711424798d24d9c8e2162b2228af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -26809,7 +26809,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685925674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26817,8 +26817,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 14.814999}
+  m_SizeDelta: {x: 0, y: 1.6300011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685925676
 MonoBehaviour:
@@ -26842,8 +26842,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Main \nMenu"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d676eb3b855fa24db84418eca454bf6, type: 2}
-  m_sharedMaterial: {fileID: 5136116197924946134, guid: 5d676eb3b855fa24db84418eca454bf6,
+  m_fontAsset: {fileID: 11400000, guid: 49bb711424798d24d9c8e2162b2228af, type: 2}
+  m_sharedMaterial: {fileID: -3842341970711651327, guid: 49bb711424798d24d9c8e2162b2228af,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -26880,7 +26880,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -29.1
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -34832,12 +34832,22 @@ MonoBehaviour:
   musicOffBtn: {fileID: 567793648}
   backToMainMenu: {fileID: 2041674707}
   tutorialObject: {fileID: 2102007695}
+  staminaObject: {fileID: 0}
+  startBt: {fileID: 0}
+  charSel: {fileID: 0}
+  setBut: {fileID: 0}
+  setbut2: {fileID: 0}
+  soundOnBt: {fileID: 0}
+  soundOffBt: {fileID: 0}
+  musicOnBt: {fileID: 0}
+  musicOfBt: {fileID: 0}
+  backMainMenuBt: {fileID: 0}
+  backMainMenu2: {fileID: 0}
+  exitSet: {fileID: 0}
+  igBt: {fileID: 0}
+  restartBt: {fileID: 0}
   watchRewardedAdBtn: {fileID: 896615714}
-  leaderboardBtn: {fileID: 2100635586}
-  achievementBtn: {fileID: 865626197}
   iapPurchaseBtn: {fileID: 2072038640}
-  removeAdsBtn: {fileID: 781245628}
-  restorePurchaseBtn: {fileID: 1681434235}
   storeUI: {fileID: 129442574}
   shareUI: {fileID: 103530593}
   shareUIController: {fileID: 1559318249}

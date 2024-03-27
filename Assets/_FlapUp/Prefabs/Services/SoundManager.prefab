@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &453646
 Transform:
   m_ObjectHideFlags: 0
@@ -51,13 +51,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a78daee23b58ce94794fa8f0307ec60b, type: 3}
     simultaneousPlayCount: 0
   button:
-    clip: {fileID: 8300000, guid: f40707d3138e7d74994d4507578b2420, type: 3}
+    clip: {fileID: 8300000, guid: bc5b6ae6cca06af4f8cb89b47318cebe, type: 3}
     simultaneousPlayCount: 0
   coin:
-    clip: {fileID: 8300000, guid: 1931bc7a27ead4d7a89e33d46fa0f392, type: 3}
+    clip: {fileID: 8300000, guid: 4064473736fddd94897dad5bbe9da361, type: 3}
     simultaneousPlayCount: 0
   gameOver:
-    clip: {fileID: 8300000, guid: a195b6524e2424b26ba7964268e53bf8, type: 3}
+    clip: {fileID: 8300000, guid: 3dd8419c3525f2d4c8f60c1ea459772c, type: 3}
     simultaneousPlayCount: 0
   tick:
     clip: {fileID: 8300000, guid: f6ec02a7692964380bd7d9b668b6edb3, type: 3}
@@ -66,13 +66,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: efd3aad14aeb7430ea8a60842208e40a, type: 3}
     simultaneousPlayCount: 0
   flap:
-    clip: {fileID: 8300000, guid: 0a6ace310047647208c36917d91429e1, type: 3}
+    clip: {fileID: 8300000, guid: 8982d9bbd58f84d4cae848b2deeeabac, type: 3}
     simultaneousPlayCount: 0
   item:
-    clip: {fileID: 8300000, guid: 58af5ee54b45e5e44a4197c1d5d224e0, type: 3}
+    clip: {fileID: 8300000, guid: 4064473736fddd94897dad5bbe9da361, type: 3}
     simultaneousPlayCount: 0
   hit:
-    clip: {fileID: 8300000, guid: 9009255da85573048abb846081836c90, type: 3}
+    clip: {fileID: 8300000, guid: 356c1ccc3d2b6184c926c93a675506e2, type: 3}
     simultaneousPlayCount: 0
   unlock:
     clip: {fileID: 8300000, guid: 706835b63bfbe4069bca37208d7e5cd9, type: 3}
@@ -80,8 +80,20 @@ MonoBehaviour:
   stamina:
     clip: {fileID: 8300000, guid: 91d8f3799f4eb1e4fb8b281e7d5678f2, type: 3}
     simultaneousPlayCount: 0
+  obstaclehit:
+    clip: {fileID: 8300000, guid: bc5b6ae6cca06af4f8cb89b47318cebe, type: 3}
+    simultaneousPlayCount: 0
+  upgrade:
+    clip: {fileID: 8300000, guid: 71986c3d1f8a31941af863b6e17e4fc4, type: 3}
+    simultaneousPlayCount: 0
+  boost:
+    clip: {fileID: 8300000, guid: af9b4912929a7ea4dbe6aa4579f6c355, type: 3}
+    simultaneousPlayCount: 0
+  hurt:
+    clip: {fileID: 8300000, guid: b4cde11f3debc514f8218d4c954e19a6, type: 3}
+    simultaneousPlayCount: 0
   _audioSource: {fileID: 8229856}
-  _flap: {fileID: 8424564246828076941}
+  _flap: {fileID: 0}
 --- !u!82 &8229856
 AudioSource:
   m_ObjectHideFlags: 0
@@ -92,8 +104,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: f06376c8d1a22f94fad20244edbe3c1f, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
