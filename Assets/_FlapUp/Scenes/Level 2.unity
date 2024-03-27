@@ -10997,14 +10997,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: background.clip
-      value: 
-      objectReference: {fileID: 8300000, guid: a78daee23b58ce94794fa8f0307ec60b, type: 3}
-    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
-      propertyPath: maxSimultaneousSounds
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8424564246828076941, guid: 393e1012855d44eb08111c95269092e0,
         type: 3}
       propertyPath: m_Pitch

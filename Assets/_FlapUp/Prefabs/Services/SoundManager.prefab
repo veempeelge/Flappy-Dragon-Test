@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &453646
 Transform:
   m_ObjectHideFlags: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb546c7d8b6c4aa0a5a0d15b48c91ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSimultaneousSounds: 1
+  maxSimultaneousSounds: 2
   background:
     clip: {fileID: 8300000, guid: a78daee23b58ce94794fa8f0307ec60b, type: 3}
     simultaneousPlayCount: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b4cde11f3debc514f8218d4c954e19a6, type: 3}
     simultaneousPlayCount: 0
   _audioSource: {fileID: 8229856}
-  _flap: {fileID: 0}
+  _flap: {fileID: 8424564246828076941}
 --- !u!82 &8229856
 AudioSource:
   m_ObjectHideFlags: 0
