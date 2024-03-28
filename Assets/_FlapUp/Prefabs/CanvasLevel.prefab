@@ -175,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1251806558117925461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -511,10 +511,10 @@ RectTransform:
   - {fileID: 9130939366927820130}
   m_Father: {fileID: 1251806558117925461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 210, y: -60}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4603127968169205488
 CanvasRenderer:
@@ -1431,10 +1431,10 @@ RectTransform:
   - {fileID: 602954760616073751}
   m_Father: {fileID: 1251806558117925461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 320, y: -60}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8129829889306693854
 CanvasRenderer:
@@ -1763,10 +1763,10 @@ RectTransform:
   - {fileID: 4097400183066303977}
   m_Father: {fileID: 3027346975908844031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -170}
+  m_SizeDelta: {x: 600, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994196044699103267
 MonoBehaviour:
@@ -1852,19 +1852,22 @@ MonoBehaviour:
   backToMainMenu: {fileID: 1680918356326690734}
   tutorialObject: {fileID: 0}
   staminaObject: {fileID: 0}
-  startBt: {fileID: 0}
-  charSel: {fileID: 0}
-  setBut: {fileID: 0}
-  setbut2: {fileID: 0}
-  soundOnBt: {fileID: 0}
-  soundOffBt: {fileID: 0}
-  musicOnBt: {fileID: 0}
-  musicOfBt: {fileID: 0}
-  backMainMenuBt: {fileID: 0}
-  backMainMenu2: {fileID: 0}
-  exitSet: {fileID: 0}
-  igBt: {fileID: 0}
-  restartBt: {fileID: 0}
+  extraLiveObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  startBt: {fileID: 6997702023201906706}
+  charSel: {fileID: 9200405755423350558}
+  setBut: {fileID: 5839317147036433713}
+  setbut2: {fileID: 3207407548698863362}
+  soundOnBt: {fileID: 6245840632412628218}
+  soundOffBt: {fileID: 2429122959885404329}
+  musicOnBt: {fileID: 7282034092171833654}
+  musicOfBt: {fileID: 4515070777445344473}
+  backMainMenuBt: {fileID: 488689814950115794}
+  backMainMenu2: {fileID: 2472976722771140558}
+  exitSet: {fileID: 1030160474893090953}
+  igBt: {fileID: 739336128643481127}
+  restartBt: {fileID: 3625021852618567948}
   watchRewardedAdBtn: {fileID: 1938513836488140201}
   iapPurchaseBtn: {fileID: 5123025712710018557}
   storeUI: {fileID: 2418918168716105293}
@@ -2801,10 +2804,10 @@ RectTransform:
   - {fileID: 1753994356062959434}
   m_Father: {fileID: 1251806558117925461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 430, y: -60}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5313622901830646207
 CanvasRenderer:
@@ -4334,10 +4337,10 @@ RectTransform:
   - {fileID: 7137460027438917417}
   m_Father: {fileID: 3027346975908844031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -446.7}
+  m_SizeDelta: {x: 600, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4699140233516471734
 CanvasRenderer:
@@ -5730,10 +5733,10 @@ RectTransform:
   - {fileID: 8331130213061558242}
   m_Father: {fileID: 3027346975908844031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -308.35}
+  m_SizeDelta: {x: 600, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3733990508148602737
 MonoBehaviour:
@@ -6214,7 +6217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &967185426332948186
 RectTransform:
   m_ObjectHideFlags: 0

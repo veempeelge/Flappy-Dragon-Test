@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
     public GameObject backToMainMenu;
     public GameObject tutorialObject;
     public GameObject staminaObject;
+    public GameObject[] extraLiveObjects;
 
     public Button startBt, charSel, setBut, setbut2 , soundOnBt, soundOffBt, musicOnBt, musicOfBt, backMainMenuBt, backMainMenu2, exitSet, igBt, restartBt;
 
@@ -215,6 +216,8 @@ public class UIManager : MonoBehaviour
         header.SetActive(true);
         title.SetActive(true);
         tapToStart.SetActive(true);
+        extraLiveObjects[0].SetActive(false);
+        extraLiveObjects[1].SetActive(false);
         characterSelectBtn.SetActive(true);  
 
         // If first launch: show "WatchForCoins" and "DailyReward" buttons if the conditions are met
@@ -236,7 +239,9 @@ public class UIManager : MonoBehaviour
         watchRewardedAdBtn.SetActive(false);
         backToMainMenu.SetActive(false);
         tutorialObject.SetActive(true);
-        staminaObject.SetActive(true);  
+        staminaObject.SetActive(true);
+        extraLiveObjects[0].SetActive(true);
+        extraLiveObjects[1].SetActive(true);
     }
 
     public void ShowGameOverUI()
@@ -250,6 +255,9 @@ public class UIManager : MonoBehaviour
         watchRewardedAdBtn.gameObject.SetActive(false);
         settingsUI.SetActive(false);
         backToMainMenu.SetActive(true);
+        staminaObject.SetActive(false);
+        extraLiveObjects[0].SetActive(false);
+        extraLiveObjects[1].SetActive(false);
 
         ShowDailyRewardBtn();
 
