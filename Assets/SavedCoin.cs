@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SavedCoin : MonoBehaviour
 {
@@ -14,12 +15,32 @@ public class SavedCoin : MonoBehaviour
 
     int coinObtainedInt;
 
+    [SerializeField] Button mainMenu;
+    [SerializeField] Button slctLevel;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        mainMenu.onClick.AddListener(MainMenuButton);
+        slctLevel.onClick.AddListener(SelectLevelButton);
         //StartCoroutine("ScoreUpdate");
         ScoreUpdate();
+    }
+
+    void MainMenuButton()
+    {
+        SceneManager.LoadScene("Main Menu");
+        Utilities.ButtonClickSound();
+
+    }
+
+    void SelectLevelButton()
+    {
+        SceneManager.LoadScene("Lv Select");
+        Utilities.ButtonClickSound();
+
     }
 
     // Update is called once per frame
