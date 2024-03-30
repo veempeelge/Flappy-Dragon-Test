@@ -7390,9 +7390,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 401476, guid: 7d56693cb785e45769ed6bc8160f338c, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
+    - target: {fileID: 163442, guid: 7d56693cb785e45769ed6bc8160f338c, type: 3}
+      propertyPath: m_Name
+      value: CoinManager
       objectReference: {fileID: 0}
     - target: {fileID: 401476, guid: 7d56693cb785e45769ed6bc8160f338c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7422,9 +7422,17 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11444632, guid: 7d56693cb785e45769ed6bc8160f338c, type: 3}
-      propertyPath: initialCoins
-      value: 200
+    - target: {fileID: 401476, guid: 7d56693cb785e45769ed6bc8160f338c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401476, guid: 7d56693cb785e45769ed6bc8160f338c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401476, guid: 7d56693cb785e45769ed6bc8160f338c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7607,6 +7615,11 @@ MonoBehaviour:
   - {fileID: 170474, guid: 5cc8038de323bfc42a1fef0ae1b520d1, type: 3}
   - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
   - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
+  - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
+  - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
+  - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
+  - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
+  - {fileID: 170474, guid: 72b6838e740366d45b4dc803506c17f7, type: 3}
   normalObstacle: {fileID: 197576, guid: b8ffdf4c185cac94188fe4507bb0c881, type: 3}
   fireObstacle: {fileID: 157988, guid: ff9b7849551b24a4e82b54c289e4d468, type: 3}
   fireParticle: {fileID: 19806546, guid: 0cabf561d2787fd41a927f4fbfd43ee7, type: 3}
@@ -7630,7 +7643,7 @@ MonoBehaviour:
   maxObstacleSpeedFactor: 3
   minimumMinObstacleSpeedFactor: 1
   minimumMaxObstacleSpeedFactor: 2
-  goldFrequecy: 0.613
+  goldFrequecy: 1
   endless: 1
 --- !u!1 &896615714 stripped
 GameObject:
@@ -7835,8 +7848,8 @@ RectTransform:
   m_GameObject: {fileID: 975340197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99843746, y: 0.99843746, z: 0.99843746}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 912175902}
   m_Father: {fileID: 8470670256456853578}
@@ -14012,7 +14025,7 @@ PrefabInstance:
     - target: {fileID: 944276615416095620, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1108.9999
+      value: 1387.4
       objectReference: {fileID: 0}
     - target: {fileID: 1187802848414566306, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
@@ -14082,7 +14095,7 @@ PrefabInstance:
     - target: {fileID: 3919293810328523897, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1109
+      value: 1387.4
       objectReference: {fileID: 0}
     - target: {fileID: 4446853865332599519, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
@@ -14410,7 +14423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -350.3, y: 1108.9999}
+  m_AnchoredPosition: {x: -350.3, y: 1387.4}
   m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1537263664
@@ -22201,6 +22214,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7206232066860282794, guid: 0b6c65cdf6df44ea994fe3ad432ce705,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215474301615193765, guid: 0b6c65cdf6df44ea994fe3ad432ce705,
         type: 3}
       propertyPath: m_IsActive
       value: 1

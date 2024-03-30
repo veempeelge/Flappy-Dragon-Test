@@ -19179,6 +19179,7 @@ MonoBehaviour:
   coinObtained: {fileID: 526693355}
   coinCount: {fileID: 305337541}
   coincount2: {fileID: 1833927359}
+  totalAllCoins: {fileID: 367534356}
   mainMenu: {fileID: 1821057650}
   slctLevel: {fileID: 1085879295}
 --- !u!4 &798360738

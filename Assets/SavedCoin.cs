@@ -12,6 +12,7 @@ public class SavedCoin : MonoBehaviour
     [SerializeField] TMP_Text coinCollectedThisRound;
     [SerializeField] TMP_Text coinObtained;
     [SerializeField] TMP_Text coinCount,coincount2;
+    [SerializeField] Text totalAllCoins;
 
     int coinObtainedInt;
 
@@ -23,6 +24,7 @@ public class SavedCoin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        totalAllCoins.text = CoinManager.Instance.Coins.ToString();
         mainMenu.onClick.AddListener(MainMenuButton);
         slctLevel.onClick.AddListener(SelectLevelButton);
         //StartCoroutine("ScoreUpdate");

@@ -18013,7 +18013,7 @@ PrefabInstance:
     - target: {fileID: 7949792482220429375, guid: f8e4600367e7c4d4ab657614a4904a5f,
         type: 3}
       propertyPath: followUpSpeedFactor
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
