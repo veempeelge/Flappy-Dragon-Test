@@ -292,6 +292,7 @@ namespace SgLib
         void SetMute(bool isMuted)
         {
             AudioSource.mute = isMuted;
+            _flap.mute = isMuted;
         }
     }
 }
