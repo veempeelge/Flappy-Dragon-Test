@@ -115,8 +115,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            stamina = 2f;
-            maxStamina = 2f;
+            stamina = stamina + 1f;
+            maxStamina = stamina + 1f;
             extraLives = 0;
         }
        
@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour
 
         if (cooldown > regenCooldown && stamina < maxStamina)
         {
-            stamina += .03f;
+            stamina += .06f;
         }
 
         if (boostTimer >= 3f && !canCollide)

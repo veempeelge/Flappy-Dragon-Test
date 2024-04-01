@@ -63,7 +63,7 @@ public class UIManager : MonoBehaviour
         ShowStartUI();
 
         startBt.onClick.AddListener(StartGame);
-        charSel.onClick.AddListener(ShowCharacterSelectionScene);
+        charSel.onClick.AddListener(StartGame);
         setBut.onClick.AddListener(ShowSettingsUI);
         setbut2 .onClick.AddListener(ShowSettingsUI);   
         soundOnBt.onClick.AddListener(ToggleSound);

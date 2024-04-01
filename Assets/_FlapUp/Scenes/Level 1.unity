@@ -14608,6 +14608,11 @@ PrefabInstance:
       objectReference: {fileID: 502034565}
     - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
+      propertyPath: stamina
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
+        type: 3}
       propertyPath: parallax
       value: 
       objectReference: {fileID: 7527284826134413563}
@@ -15913,12 +15918,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 915236007032652109, guid: 693e8f4f98cc8404f80f6f6cd54fdb4d,
+    - target: {fileID: 761029777545687178, guid: 693e8f4f98cc8404f80f6f6cd54fdb4d,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 873d654d985dc4327872d142dee1c54a,
-        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1024788526366743540, guid: 693e8f4f98cc8404f80f6f6cd54fdb4d,
         type: 3}
       propertyPath: m_AnchorMax.y

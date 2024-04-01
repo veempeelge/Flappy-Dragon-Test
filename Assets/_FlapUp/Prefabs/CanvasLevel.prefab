@@ -188,8 +188,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1868627047632246268}
   - {fileID: 5006004672253282610}
+  - {fileID: 1868627047632246268}
   - {fileID: 334139139484431075}
   - {fileID: 7853114203889350323}
   - {fileID: 7357211192508132272}
@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 30
+  m_Spacing: 74.76
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -505,8 +505,8 @@ RectTransform:
   m_GameObject: {fileID: 738975029017443710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.62, y: 1.62, z: 1.62}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9130939366927820130}
   m_Father: {fileID: 1251806558117925461}
@@ -1133,7 +1133,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4539791156818728969}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ShowCharacterSelectionScene
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1425,8 +1425,8 @@ RectTransform:
   m_GameObject: {fileID: 1680918356326690734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.62, y: 1.62, z: 1.62}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 602954760616073751}
   m_Father: {fileID: 1251806558117925461}
@@ -2798,8 +2798,8 @@ RectTransform:
   m_GameObject: {fileID: 2480052469105106952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.62, y: 1.62, z: 1.62}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1753994356062959434}
   m_Father: {fileID: 1251806558117925461}
@@ -3893,8 +3893,8 @@ RectTransform:
   m_GameObject: {fileID: 3208573007927157736}
   m_LocalRotation: {x: -0, y: -0, z: -0.00000032584137, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0309278, y: 0.64516133, z: 0.64516133}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.42, y: 0.88864535, z: 0.88864535}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6708763529150490801}
   m_Father: {fileID: 4609546027567548637}
@@ -5048,7 +5048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6795090b5a53044c29bc1cc73b3d4a37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7abe195015c7644bae93f8eb5e8faec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7093,8 +7093,8 @@ RectTransform:
   m_GameObject: {fileID: 6048545773832983578}
   m_LocalRotation: {x: -0, y: -0, z: -0.00000032584137, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0309278, y: 0.64516133, z: 0.64516133}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.42, y: 0.88864535, z: 0.88864535}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 745922625467249148}
   m_Father: {fileID: 4609546027567548637}
@@ -7768,8 +7768,8 @@ RectTransform:
   m_GameObject: {fileID: 6772016046437058536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5006004672253282610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8707,8 +8707,8 @@ RectTransform:
   m_GameObject: {fileID: 7519926022316636982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1868627047632246268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8745,7 +8745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 26a3238c040ce41baaad3035b1f36a08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 873d654d985dc4327872d142dee1c54a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9061,8 +9061,8 @@ RectTransform:
   m_GameObject: {fileID: 7787442622584817017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4160442289882576032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

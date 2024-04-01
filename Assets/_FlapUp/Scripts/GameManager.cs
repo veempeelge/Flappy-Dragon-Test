@@ -280,11 +280,7 @@ public class GameManager : MonoBehaviour
                 CreateObstacle();
                 listIndex++;
 
-                if (ScoreManager.Instance.Score/5 == 1 && space > 3)
-                {
-                    space -= .2f;
-                    addedPosition = new Vector3(randomizeX, space, 0);
-                }
+               
             }
 
             //Destroy obstacle and move the ground up
