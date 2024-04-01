@@ -280,7 +280,7 @@ public class GameManager : MonoBehaviour
                 CreateObstacle();
                 listIndex++;
 
-               
+               S
             }
 
             //Destroy obstacle and move the ground up

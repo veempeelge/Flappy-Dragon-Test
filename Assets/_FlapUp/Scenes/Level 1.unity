@@ -14609,7 +14609,7 @@ PrefabInstance:
     - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
       propertyPath: stamina
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2622840126560306758, guid: 124901244c4157a4da47beffb89824be,
         type: 3}
