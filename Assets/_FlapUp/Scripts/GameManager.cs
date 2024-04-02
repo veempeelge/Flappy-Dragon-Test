@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
         private set { _gameCount = value; } 
     }
 
+    public float initialSpace;
+
     private static int _gameCount = 0;
 
     [Header("Set the target frame rate for this game")]
@@ -154,6 +156,7 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = targetFrameRate;
         ScoreManager.Instance.Reset();
 
+        initialSpace = space;
 
         if(endless == true)
         {
@@ -270,6 +273,14 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GenerateObstacle()
     {
+        if (obstaclePrefab = normalObstacle)
+        {
+            space = 12f;
+        }
+        else
+        {
+            space = initialSpace;
+        }
         while (GameState != GameState.GameOver)
         {
             //Player jump over an obstacle -> add score, create next obstacle
