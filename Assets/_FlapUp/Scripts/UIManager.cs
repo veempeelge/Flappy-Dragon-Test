@@ -426,13 +426,13 @@ public class UIManager : MonoBehaviour
             shareUIController.AnimClip = clip;
             #endif
 
-            shareUI.SetActive(true);
+           // shareUI.SetActive(true);
         }
     }
 
     public void HideShareUI()
     {
-        shareUI.SetActive(false);
+       // shareUI.SetActive(false);
     }
 
     public void ShowCharacterSelectionScene()
