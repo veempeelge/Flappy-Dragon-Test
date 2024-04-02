@@ -441,7 +441,7 @@ public class PlayerController : MonoBehaviour
                         lives.text = extraLives.ToString();
                         anim.SetTrigger("Iframe");
                         StartCoroutine("Iframe");
-                       if (other.tag == "Finish")
+                       if (other.tag != "Finish")
                         {
                             SoundManager.Instance.PlaySound(SoundManager.Instance.hurt);
                             SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
@@ -461,7 +461,7 @@ public class PlayerController : MonoBehaviour
                         //Create particle base on obstacle
                         rigid.isKinematic = true;
                         StartCoroutine(WaitToDisableKinematic());
-                        if (other.tag == "Finish")
+                        if (other.tag != "Finish")
                         {
                             SoundManager.Instance.PlaySound(SoundManager.Instance.hurt);
                             SoundManager.Instance.PlaySound(SoundManager.Instance.hit);
