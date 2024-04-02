@@ -15426,6 +15426,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1357025548}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1373314342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4515070777445344473, guid: 693e8f4f98cc8404f80f6f6cd54fdb4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1628577684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1383905067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16814,7 +16826,7 @@ PrefabInstance:
         type: 3}
       propertyPath: musicOfBt
       value: 
-      objectReference: {fileID: 567793651}
+      objectReference: {fileID: 1373314342}
     - target: {fileID: 4539791156818728969, guid: 693e8f4f98cc8404f80f6f6cd54fdb4d,
         type: 3}
       propertyPath: staminaObject
