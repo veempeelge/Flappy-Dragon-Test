@@ -185,7 +185,7 @@ public class UIManager : MonoBehaviour
 //        restorePurchaseBtn.SetActive(enablePremium);
 
         // Hidden by default
-        storeUI.SetActive(false);
+        storeUI.SetActive(true);
         settingsUI.SetActive(false);
         shareUI.SetActive(false);
 
